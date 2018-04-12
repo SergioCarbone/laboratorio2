@@ -9,14 +9,14 @@ namespace Billete
     public class Dolar
     {
         private double cantidad;
-        private float cotizRespectoDolar;
+        private static float cotizRespectoDolar;
 
         private Dolar()
         {
         }
 
 
-        public Dolar(double cantidad)
+        public Dolar(double cantidad) : this()
         {
             this.cantidad = cantidad;
         }
@@ -24,13 +24,13 @@ namespace Billete
 
         public Dolar(double cantidad, float cotizacion) : this(cantidad)
         {
-            this.cotizRespectoDolar = cotizacion;
+            Dolar.cotizRespectoDolar = cotizacion;
         }
 
 
-        public float GetCotizacion()
+        public static float GetCotizacion()
         {
-            return this.cotizRespectoDolar;
+            return Dolar.cotizRespectoDolar;
         }
 
         public double GetCantidad()
@@ -41,16 +41,16 @@ namespace Billete
 
         public static explicit operator Euro (Dolar dolar)
         {
-            Euro retorno = new Euro(0);
-            retorno = dolar.cantidad * retorno.GetCotizacion();
+            Euro retorno;
+            retorno = dolar.cantidad * Euro.GetCotizacion();
             return retorno; 
         }
 
 
         public static explicit operator Pesos (Dolar dolar)
         {
-            Pesos retorno = new Pesos(0);
-            retorno = dolar.cantidad / retorno.GetCotizacion();
+            Pesos retorno;
+            retorno = dolar.cantidad * Pesos.GetCotizacion();
             return retorno;
         }
 
@@ -127,14 +127,14 @@ namespace Billete
 
         public static Dolar operator - (Dolar dolar, Euro euro)
         {
-            Dolar aux = (Dolar)euro.GetCantidad();
+            Dolar aux = ((Dolar)euro).GetCantidad();
             Dolar retorno = dolar.cantidad - aux.cantidad;            
             return retorno;
         }
 
         public static Dolar operator + (Dolar dolar, Euro euro)
         {
-            Dolar aux = (Dolar)euro.GetCantidad();
+            Dolar aux = ((Dolar)euro).GetCantidad();
             Dolar retorno = dolar.cantidad + aux.cantidad;
             return retorno;
         }
@@ -142,14 +142,14 @@ namespace Billete
 
         public static Dolar operator - (Dolar dolar, Pesos peso)
         {
-            Dolar aux = (Dolar)peso.GetCantidad();
+            Dolar aux = ((Dolar)peso).GetCantidad();
             Dolar retorno = dolar.cantidad - aux.cantidad;
             return retorno;
         }
 
         public static Dolar operator + (Dolar dolar, Pesos peso)
         {
-            Dolar aux = (Dolar)peso.GetCantidad();
+            Dolar aux = ((Dolar)peso).GetCantidad();
             Dolar retorno = dolar.cantidad + aux.cantidad;
             return retorno;
         }

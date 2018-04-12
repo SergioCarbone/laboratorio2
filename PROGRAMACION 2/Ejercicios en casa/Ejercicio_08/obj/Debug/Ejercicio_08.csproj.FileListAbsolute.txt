@@ -12,3 +12,9 @@ E:\PROGRAMACION 2\Ejercicios en casa\Ejercicio_08\bin\Debug\Ejercicio_08.exe
 E:\PROGRAMACION 2\Ejercicios en casa\Ejercicio_08\bin\Debug\Ejercicio_08.pdb
 E:\PROGRAMACION 2\Ejercicios en casa\Ejercicio_08\obj\Debug\Ejercicio_08.pdb
 E:\PROGRAMACION 2\Ejercicios en casa\Ejercicio_08\obj\Debug\Ejercicio_08.csproj.CoreCompileInputs.cache
+D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_08\bin\Debug\Ejercicio_08.exe.config
+D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_08\bin\Debug\Ejercicio_08.exe
+D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_08\bin\Debug\Ejercicio_08.pdb
+D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_08\obj\Debug\Ejercicio_08.csprojResolveAssemblyReference.cache
+D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_08\obj\Debug\Ejercicio_08.exe
+D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_08\obj\Debug\Ejercicio_08.pdb

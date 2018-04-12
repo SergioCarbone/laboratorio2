@@ -9,26 +9,26 @@ namespace Billete
     public class Pesos
     {
         private double cantidad;
-        private float cotizRespectoDolar;
+        private static float cotizRespectoDolar;
 
         private Pesos()
         {
            
         }
 
-        public Pesos(double cantidad)
+        public Pesos(double cantidad) : this()
         {
             this.cantidad = cantidad;
         }
 
         public Pesos(double cantidad, float cotizacion) : this(cantidad)
         {
-            this.cotizRespectoDolar = cotizacion;
+            Pesos.cotizRespectoDolar = cotizacion;
         }
 
-        public float GetCotizacion()
+        public static float GetCotizacion()
         {
-            return this.cotizRespectoDolar;
+            return Pesos.cotizRespectoDolar;
         }
 
         public double GetCantidad()
@@ -39,15 +39,16 @@ namespace Billete
 
         public static explicit operator Dolar (Pesos pesos)
         {
-            Dolar retorno = new Dolar(0);
-            retorno = pesos.cantidad * retorno.GetCotizacion();
+            Dolar retorno;
+            retorno = pesos.cantidad * Dolar.GetCotizacion();
             return retorno;
         }
 
         public static explicit operator Euro(Pesos pesos)
         {
-            Euro retorno = new Euro(0);
-            retorno = pesos.cantidad * retorno.GetCotizacion();
+            Euro retorno;
+            Dolar aux = Euro.GetCotizacion();
+            retorno = pesos.cantidad / aux.GetCantidad();
             return retorno;
         }
 
@@ -126,7 +127,7 @@ namespace Billete
 
         public static Pesos operator - (Pesos peso, Dolar dolar)
         {
-            Pesos aux = (Pesos)dolar.GetCantidad();
+            Pesos aux = ((Pesos)dolar).GetCantidad();
             Pesos retorno = peso.cantidad - aux.cantidad;
             return retorno;
         }
@@ -135,7 +136,7 @@ namespace Billete
 
         public static Pesos operator + (Pesos peso, Dolar dolar)
         {
-            Pesos aux = (Pesos)dolar.GetCantidad();
+            Pesos aux = ((Pesos)dolar).GetCantidad();
             Pesos retorno = peso.cantidad + aux.cantidad;
             return retorno;
         }
@@ -144,7 +145,7 @@ namespace Billete
 
         public static Pesos operator - (Pesos peso, Euro euro)
         {
-            Pesos aux = (Pesos)euro.GetCantidad();
+            Pesos aux = ((Pesos)euro).GetCantidad();
             Pesos retorno = peso.cantidad - aux.cantidad;
             return retorno;
         }
@@ -153,7 +154,7 @@ namespace Billete
 
         public static Pesos operator + (Pesos peso, Euro euro)
         {
-            Pesos aux = (Pesos)euro.GetCantidad();
+            Pesos aux = ((Pesos)euro).GetCantidad();
             Pesos retorno = peso.cantidad + aux.cantidad;
             return retorno;
         }

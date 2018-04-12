@@ -1,0 +1,5 @@
+D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_26\bin\Debug\Ejercicio_26.exe.config
+D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_26\bin\Debug\Ejercicio_26.exe
+D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_26\bin\Debug\Ejercicio_26.pdb
+D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_26\obj\Debug\Ejercicio_26.exe
+D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_26\obj\Debug\Ejercicio_26.pdb
