@@ -1,0 +1,13 @@
+C:\Users\alumno\Desktop\Ejercicio_01\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\alumno\Desktop\Ejercicio_01\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\alumno\Desktop\Ejercicio_01\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\alumno\Desktop\Ejercicio_01\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\alumno\Desktop\Ejercicio_01\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\alumno\Desktop\Ejercicio_01\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+F:\PROGRAMACION 2\Ejercicio_01\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+F:\PROGRAMACION 2\Ejercicio_01\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+F:\PROGRAMACION 2\Ejercicio_01\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+F:\PROGRAMACION 2\Ejercicio_01\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+F:\PROGRAMACION 2\Ejercicio_01\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+F:\PROGRAMACION 2\Ejercicio_01\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+F:\PROGRAMACION 2\Ejercicio_01\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

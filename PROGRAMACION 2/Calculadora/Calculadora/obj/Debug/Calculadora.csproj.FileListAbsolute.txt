@@ -1,0 +1,20 @@
+C:\Users\PB\Desktop\Calculadora\Calculadora\obj\Debug\Calculadora.csprojResolveAssemblyReference.cache
+C:\Users\PB\Desktop\Calculadora\Calculadora\obj\Debug\Calculadora.csproj.CoreCompileInputs.cache
+C:\Users\PB\Desktop\Calculadora\Calculadora\bin\Debug\Calculadora.exe.config
+C:\Users\PB\Desktop\Calculadora\Calculadora\bin\Debug\Calculadora.exe
+C:\Users\PB\Desktop\Calculadora\Calculadora\bin\Debug\Calculadora.pdb
+C:\Users\PB\Desktop\Calculadora\Calculadora\obj\Debug\Calculadora.exe
+C:\Users\PB\Desktop\Calculadora\Calculadora\obj\Debug\Calculadora.pdb
+E:\PROGRAMACION 2\Calculadora\Calculadora\bin\Debug\Calculadora.exe.config
+E:\PROGRAMACION 2\Calculadora\Calculadora\obj\Debug\Calculadora.exe
+E:\PROGRAMACION 2\Calculadora\Calculadora\obj\Debug\Calculadora.pdb
+E:\PROGRAMACION 2\Calculadora\Calculadora\bin\Debug\Calculadora.exe
+E:\PROGRAMACION 2\Calculadora\Calculadora\bin\Debug\Calculadora.pdb
+E:\PROGRAMACION 2\Calculadora\Calculadora\obj\Debug\Calculadora.csprojResolveAssemblyReference.cache
+F:\PROGRAMACION 2\Calculadora\Calculadora\bin\Debug\Calculadora.exe.config
+F:\PROGRAMACION 2\Calculadora\Calculadora\bin\Debug\Calculadora.exe
+F:\PROGRAMACION 2\Calculadora\Calculadora\bin\Debug\Calculadora.pdb
+F:\PROGRAMACION 2\Calculadora\Calculadora\obj\Debug\Calculadora.csprojResolveAssemblyReference.cache
+F:\PROGRAMACION 2\Calculadora\Calculadora\obj\Debug\Calculadora.csproj.CoreCompileInputs.cache
+F:\PROGRAMACION 2\Calculadora\Calculadora\obj\Debug\Calculadora.exe
+F:\PROGRAMACION 2\Calculadora\Calculadora\obj\Debug\Calculadora.pdb

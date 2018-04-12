@@ -1,0 +1,21 @@
+C:\Users\PB\Desktop\Ejercicios en casa\Ejercicios en casa\bin\Debug\Ejercicios en casa.exe.config
+C:\Users\PB\Desktop\Ejercicios en casa\Ejercicios en casa\bin\Debug\Ejercicios en casa.exe
+C:\Users\PB\Desktop\Ejercicios en casa\Ejercicios en casa\bin\Debug\Ejercicios en casa.pdb
+C:\Users\PB\Desktop\Ejercicios en casa\Ejercicios en casa\obj\Debug\Ejercicio_01.csprojResolveAssemblyReference.cache
+C:\Users\PB\Desktop\Ejercicios en casa\Ejercicios en casa\obj\Debug\Ejercicio_01.csproj.CoreCompileInputs.cache
+C:\Users\PB\Desktop\Ejercicios en casa\Ejercicios en casa\obj\Debug\Ejercicios en casa.exe
+C:\Users\PB\Desktop\Ejercicios en casa\Ejercicios en casa\obj\Debug\Ejercicios en casa.pdb
+E:\PROGRAMACION 2\Ejercicios en casa\Ejercicios en casa\bin\Debug\Ejercicios en casa.exe.config
+E:\PROGRAMACION 2\Ejercicios en casa\Ejercicios en casa\obj\Debug\Ejercicios en casa.exe
+E:\PROGRAMACION 2\Ejercicios en casa\Ejercicios en casa\obj\Debug\Ejercicios en casa.pdb
+E:\PROGRAMACION 2\Ejercicios en casa\Ejercicios en casa\bin\Debug\Ejercicios en casa.exe
+E:\PROGRAMACION 2\Ejercicios en casa\Ejercicios en casa\bin\Debug\Ejercicios en casa.pdb
+E:\PROGRAMACION 2\Ejercicios en casa\Ejercicios en casa\obj\Debug\Ejercicio_01.csprojResolveAssemblyReference.cache
+F:\PROGRAMACION 2\Ejercicios en casa\Ejercicios en casa\bin\Debug\Ejercicios en casa.exe.config
+F:\PROGRAMACION 2\Ejercicios en casa\Ejercicios en casa\bin\Debug\Ejercicios en casa.exe
+F:\PROGRAMACION 2\Ejercicios en casa\Ejercicios en casa\bin\Debug\Ejercicios en casa.pdb
+F:\PROGRAMACION 2\Ejercicios en casa\Ejercicios en casa\obj\Debug\Ejercicio_01.csprojResolveAssemblyReference.cache
+F:\PROGRAMACION 2\Ejercicios en casa\Ejercicios en casa\obj\Debug\Ejercicio_01.csproj.CoreCompileInputs.cache
+F:\PROGRAMACION 2\Ejercicios en casa\Ejercicios en casa\obj\Debug\Ejercicios en casa.exe
+F:\PROGRAMACION 2\Ejercicios en casa\Ejercicios en casa\obj\Debug\Ejercicios en casa.pdb
+E:\PROGRAMACION 2\Ejercicios en casa\Ejercicios en casa\obj\Debug\Ejercicio_01.csproj.CoreCompileInputs.cache

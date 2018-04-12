@@ -1,0 +1,7 @@
+E:\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\bin\Debug\Ejercicio_23.exe.config
+E:\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\bin\Debug\Ejercicio_23.exe
+E:\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\bin\Debug\Ejercicio_23.pdb
+E:\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\obj\Debug\Ejercicio_23.csprojResolveAssemblyReference.cache
+E:\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\obj\Debug\Ejercicio_23.csproj.CoreCompileInputs.cache
+E:\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\obj\Debug\Ejercicio_23.exe
+E:\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\obj\Debug\Ejercicio_23.pdb
