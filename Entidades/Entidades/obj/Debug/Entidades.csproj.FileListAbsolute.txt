@@ -1,0 +1,13 @@
+F:\PROGRAMACION 2\Entidades\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+F:\PROGRAMACION 2\Entidades\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+F:\PROGRAMACION 2\Entidades\Entidades\bin\Debug\Entidades.exe.config
+F:\PROGRAMACION 2\Entidades\Entidades\bin\Debug\Entidades.exe
+F:\PROGRAMACION 2\Entidades\Entidades\bin\Debug\Entidades.pdb
+F:\PROGRAMACION 2\Entidades\Entidades\obj\Debug\Entidades.exe
+F:\PROGRAMACION 2\Entidades\Entidades\obj\Debug\Entidades.pdb
+E:\PROGRAMACION 2\Entidades\Entidades\bin\Debug\Entidades.exe.config
+E:\PROGRAMACION 2\Entidades\Entidades\obj\Debug\Entidades.exe
+E:\PROGRAMACION 2\Entidades\Entidades\obj\Debug\Entidades.pdb
+E:\Entidades\Entidades\bin\Debug\Entidades.exe.config
+E:\Entidades\Entidades\obj\Debug\Entidades.exe
+E:\Entidades\Entidades\obj\Debug\Entidades.pdb
