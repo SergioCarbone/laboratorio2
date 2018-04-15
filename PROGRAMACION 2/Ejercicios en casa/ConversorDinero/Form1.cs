@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Ejercicio_23;
+
 
 namespace ConversorDinero
 {
@@ -19,6 +19,41 @@ namespace ConversorDinero
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEuro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDolar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPeso_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConverEuro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConverDolar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConverPesos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

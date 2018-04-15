@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_01", "Ejercicios en casa\Ejercicio_01.csproj", "{214B5EEE-AC10-4FB9-A60B-5022F81F7BD8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_02", "Ejercicio_02\Ejercicio_02.csproj", "{ED6272CA-61FA-43B7-8176-3B9ABE093212}"
@@ -44,6 +46,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_23Form", "ConversorDinero\Ejercicio_23Form.csproj", "{F65271A4-DE0B-49DF-A2C0-70B5AE2F8F12}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_26", "Ejercicio_26\Ejercicio_26.csproj", "{582E9BFC-5329-4E8A-8DBB-3E32ABE392A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_27", "Ejercicio_27\Ejercicio_27.csproj", "{9CCAFAA5-54FF-4684-B23F-2E99A8C6BCF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio_28", "Ejercicio_28\Ejercicio_28.csproj", "{7963C955-E23C-44C6-9C01-E6A671F02911}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -139,6 +145,14 @@ Global
 		{582E9BFC-5329-4E8A-8DBB-3E32ABE392A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{582E9BFC-5329-4E8A-8DBB-3E32ABE392A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{582E9BFC-5329-4E8A-8DBB-3E32ABE392A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CCAFAA5-54FF-4684-B23F-2E99A8C6BCF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CCAFAA5-54FF-4684-B23F-2E99A8C6BCF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CCAFAA5-54FF-4684-B23F-2E99A8C6BCF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CCAFAA5-54FF-4684-B23F-2E99A8C6BCF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7963C955-E23C-44C6-9C01-E6A671F02911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7963C955-E23C-44C6-9C01-E6A671F02911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7963C955-E23C-44C6-9C01-E6A671F02911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7963C955-E23C-44C6-9C01-E6A671F02911}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

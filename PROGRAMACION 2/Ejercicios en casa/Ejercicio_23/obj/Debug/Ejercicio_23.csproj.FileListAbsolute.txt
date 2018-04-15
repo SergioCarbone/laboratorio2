@@ -19,3 +19,10 @@ D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\bin\Debug\
 D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\obj\Debug\Ejercicio_23.csprojResolveAssemblyReference.cache
 D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\obj\Debug\Ejercicio_23.dll
 D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\obj\Debug\Ejercicio_23.pdb
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\bin\Debug\Ejercicio_23.dll.config
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\bin\Debug\Ejercicio_23.dll
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\bin\Debug\Ejercicio_23.pdb
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\obj\Debug\Ejercicio_23.csprojResolveAssemblyReference.cache
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\obj\Debug\Ejercicio_23.csproj.CoreCompileInputs.cache
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\obj\Debug\Ejercicio_23.dll
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_23\obj\Debug\Ejercicio_23.pdb
