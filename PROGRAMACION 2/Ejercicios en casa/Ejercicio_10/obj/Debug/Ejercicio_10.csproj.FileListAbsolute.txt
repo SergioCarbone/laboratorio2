@@ -25,3 +25,10 @@ D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\bin\Debug\
 D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\obj\Debug\Ejercicio_10.csprojResolveAssemblyReference.cache
 D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\obj\Debug\Ejercicio_10.exe
 D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\obj\Debug\Ejercicio_10.pdb
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\bin\Debug\Ejercicio_10.exe.config
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\bin\Debug\Ejercicio_10.exe
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\bin\Debug\Ejercicio_10.pdb
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\obj\Debug\Ejercicio_10.csprojResolveAssemblyReference.cache
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\obj\Debug\Ejercicio_10.csproj.CoreCompileInputs.cache
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\obj\Debug\Ejercicio_10.exe
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\obj\Debug\Ejercicio_10.pdb
