@@ -7,7 +7,14 @@ D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_27\obj\Debug\
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_27\bin\Debug\Ejercicio_27.exe.config
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_27\bin\Debug\Ejercicio_27.exe
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_27\bin\Debug\Ejercicio_27.pdb
+<<<<<<< HEAD
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_27\obj\Debug\Ejercicio_27.csproj.CoreCompileInputs.cache
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_27\obj\Debug\Ejercicio_27.exe
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_27\obj\Debug\Ejercicio_27.pdb
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_27\obj\Debug\Ejercicio_27.csprojResolveAssemblyReference.cache
+=======
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_27\obj\Debug\Ejercicio_27.csprojResolveAssemblyReference.cache
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_27\obj\Debug\Ejercicio_27.csproj.CoreCompileInputs.cache
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_27\obj\Debug\Ejercicio_27.exe
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_27\obj\Debug\Ejercicio_27.pdb
+>>>>>>> 1d3bb7e5dc4644709e0d2edacbea9ef6fa4bbcde

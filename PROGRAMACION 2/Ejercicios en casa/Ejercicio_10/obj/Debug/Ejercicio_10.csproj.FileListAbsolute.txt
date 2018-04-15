@@ -28,6 +28,10 @@ D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\obj\Debug\
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\bin\Debug\Ejercicio_10.exe.config
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\bin\Debug\Ejercicio_10.exe
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\bin\Debug\Ejercicio_10.pdb
+<<<<<<< HEAD
+=======
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\obj\Debug\Ejercicio_10.csprojResolveAssemblyReference.cache
+>>>>>>> 1d3bb7e5dc4644709e0d2edacbea9ef6fa4bbcde
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\obj\Debug\Ejercicio_10.csproj.CoreCompileInputs.cache
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\obj\Debug\Ejercicio_10.exe
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\Ejercicio_10\obj\Debug\Ejercicio_10.pdb

@@ -20,6 +20,13 @@ D:\sergio\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\obj\Deb
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\bin\Debug\ConversorDinero.exe.config
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\bin\Debug\ConversorDinero.exe
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\bin\Debug\ConversorDinero.pdb
+<<<<<<< HEAD
+=======
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\bin\Debug\Ejercicio_23.dll
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\bin\Debug\Ejercicio_23.pdb
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\bin\Debug\Ejercicio_23.dll.config
+F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\bin\Debug\Ejercicio_23.exe.config
+>>>>>>> 1d3bb7e5dc4644709e0d2edacbea9ef6fa4bbcde
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\obj\Debug\Ejercicio_23Form.csprojResolveAssemblyReference.cache
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\obj\Debug\ConversorDinero.Form1.resources
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\obj\Debug\ConversorDinero.Properties.Resources.resources
@@ -28,6 +35,9 @@ F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\obj\Debug\Ejer
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\obj\Debug\Ejercicio_23Form.csproj.CopyComplete
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\obj\Debug\ConversorDinero.exe
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\obj\Debug\ConversorDinero.pdb
+<<<<<<< HEAD
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\bin\Debug\Ejercicio_20.exe
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\bin\Debug\Ejercicio_20.pdb
 F:\laboratorio2\PROGRAMACION 2\Ejercicios en casa\ConversorDinero\bin\Debug\Ejercicio_20.exe.config
+=======
+>>>>>>> 1d3bb7e5dc4644709e0d2edacbea9ef6fa4bbcde
