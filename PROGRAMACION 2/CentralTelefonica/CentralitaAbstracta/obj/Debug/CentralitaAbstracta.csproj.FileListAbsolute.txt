@@ -1,6 +1,0 @@
-E:\laboratorio2\PROGRAMACION 2\CentralTelefonica\CentralitaAbstracta\bin\Debug\CentralitaAbstracta.exe.config
-E:\laboratorio2\PROGRAMACION 2\CentralTelefonica\CentralitaAbstracta\bin\Debug\CentralitaAbstracta.exe
-E:\laboratorio2\PROGRAMACION 2\CentralTelefonica\CentralitaAbstracta\bin\Debug\CentralitaAbstracta.pdb
-E:\laboratorio2\PROGRAMACION 2\CentralTelefonica\CentralitaAbstracta\obj\Debug\CentralitaAbstracta.exe
-E:\laboratorio2\PROGRAMACION 2\CentralTelefonica\CentralitaAbstracta\obj\Debug\CentralitaAbstracta.pdb
-E:\laboratorio2\PROGRAMACION 2\CentralTelefonica\CentralitaAbstracta\obj\Debug\CentralitaAbstracta.csprojResolveAssemblyReference.cache
