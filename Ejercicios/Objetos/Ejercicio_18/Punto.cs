@@ -10,20 +10,14 @@ namespace Geometria
     {
         private int x,y;
 
-        public int GetX
+        public int GetX()
         {
-            get
-            {
-                return this.x;
-            }
+            return this.x;
         }
 
-        public int GetY
+        public int GetY()
         {
-            get
-            {
-                return this.y;
-            }
+            return this.y;
         }
 
         public Punto(int x, int y)

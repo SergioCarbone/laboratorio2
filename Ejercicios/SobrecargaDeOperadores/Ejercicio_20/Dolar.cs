@@ -26,24 +26,39 @@ namespace Billete
             Dolar.cotizRespectoDolar = cotizacion;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static float GetCotizacion()
         {
             float retorno = Dolar.cotizRespectoDolar;
             return retorno;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public double GetCantidad()
         {
             return this.cantidad;
         }
 
 
-        //public static explicit operator Euro(Dolar d)
-        //{            
-        //    Euro retorno = (Euro)(d.cantidad * Euro.GetCotizacion();
-        //    return retorno;
-        //}
+        public static explicit operator Euro(Dolar d)
+        {
+            Euro retorno = new Euro(d.cantidad * Dolar.GetCotizacion());
+            return retorno;
+        }
 
-       
+
+        public static explicit operator Peso(Dolar d)
+        {
+            Peso retorno = new Peso(d.cantidad * Dolar.GetCotizacion());
+            return retorno;
+        }
+
+
     }
 }

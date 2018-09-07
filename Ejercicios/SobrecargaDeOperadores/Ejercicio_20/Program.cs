@@ -13,7 +13,7 @@ namespace Ejercicio_20
         {
             Console.Title = "Ejercicio_20";
             Console.ForegroundColor = ConsoleColor.Green;
-
+            
             
         }
     }
