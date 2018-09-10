@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Billete
+namespace Moneda
 {
     public class Peso
     {
@@ -79,7 +79,7 @@ namespace Billete
         {
             bool retorno = false;
             Dolar dolar = (Dolar)p;
-            if(dolar.GetCantidad() == d.GetCantidad())
+            if (dolar.GetCantidad() == d.GetCantidad())
             {
                 retorno = true;
             }
@@ -108,7 +108,7 @@ namespace Billete
             bool retorno = false;
             Dolar pesoDolar = (Dolar)p;
             Dolar euroDolar = (Dolar)e;
-            if(pesoDolar.GetCantidad() == euroDolar.GetCantidad())
+            if (pesoDolar.GetCantidad() == euroDolar.GetCantidad())
             {
                 retorno = true;
             }
@@ -198,7 +198,5 @@ namespace Billete
             Peso aux = (Peso)e;
             return (aux.GetCantidad() - p.cantidad);
         }
-
-
     }
 }

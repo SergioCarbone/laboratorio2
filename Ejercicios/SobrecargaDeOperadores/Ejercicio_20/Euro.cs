@@ -13,7 +13,7 @@ namespace Billete
 
         private Euro()
         {
-
+            Euro.cotizRespectoDolar = (float)1.3642;
         }
 
         public Euro(double cantidad) : this()
@@ -35,6 +35,10 @@ namespace Billete
             return Euro.cotizRespectoDolar;            
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public double GetCantidad()
         {
             return this.cantidad;
@@ -67,6 +71,138 @@ namespace Billete
         public static implicit operator Euro(double d)
         {
             return (d * Euro.GetCotizacion());
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="euro1"></param>
+        /// <param name="euro2"></param>
+        /// <returns></returns>
+        public static bool operator ==(Euro euro1, Euro euro2)
+        {
+            return (euro1.GetCantidad() == euro2.GetCantidad());
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="euro1"></param>
+        /// <param name="euro2"></param>
+        /// <returns></returns>
+        public static bool operator !=(Euro euro1, Euro euro2)
+        {
+            return (!(euro1 == euro2));
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        public static bool operator ==(Euro e, Peso p)
+        {
+            bool retorno = false;
+            Dolar euroDolar = (Dolar)e;
+            Dolar pesoDolar = (Dolar)p;
+            if(euroDolar.GetCantidad() == pesoDolar.GetCantidad())
+            {
+                retorno = true;
+            }
+            return retorno;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        public static bool operator !=(Euro e, Peso p)
+        {
+            return (!(e == p));
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="d"></param>
+        /// <returns></returns>
+        public static bool operator ==(Euro e, Dolar d)
+        {
+            bool retorno = false;
+            Dolar euroDolar = (Dolar)e;
+            if(euroDolar.GetCantidad() == d.GetCantidad())
+            {
+                retorno = true;
+            }
+            return retorno;
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="d"></param>
+        /// <returns></returns>
+        public static bool operator !=(Euro e, Dolar d)
+        {
+            return (!(e == d));
+        }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        public static Euro operator +(Euro e, Peso p)
+        {
+            Euro aux = (Euro)p;
+            return (aux.GetCantidad() + e.GetCantidad());
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="d"></param>
+        /// <returns></returns>
+        public static Euro operator +(Euro e, Dolar d)
+        {
+            Euro aux = (Euro)d;
+            return (aux.GetCantidad() + e.GetCantidad());
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        public static Euro operator -(Euro e, Peso p)
+        {
+            Euro aux = (Euro)p;
+            return (aux.GetCantidad() - e.GetCantidad());
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="d"></param>
+        /// <returns></returns>
+        public static Euro operator -(Euro e, Dolar d)
+        {
+            Euro aux = (Euro)d;
+            return (aux.GetCantidad() - e.GetCantidad());
         }
     }
 }
