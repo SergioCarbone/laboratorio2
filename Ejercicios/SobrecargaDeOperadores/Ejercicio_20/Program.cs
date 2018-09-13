@@ -33,7 +33,7 @@ namespace Ejercicio_20
             Peso aux_p = p + e;
             Console.WriteLine("Pesos + Euro ($259,26xx): {0}", aux_p.GetCantidad());
             aux_p = p + d;
-            Console.WriteLine("Pesos + Dólar ($211,65xx): {0}", aux_p.GetCantidad());
+            Console.WriteLine("Pesos + Dólar ($201,65xx): {0}", aux_p.GetCantidad());
 
             Console.ReadKey();
         }

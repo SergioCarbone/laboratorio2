@@ -16,7 +16,7 @@ namespace Billete
             Peso.cotizRespectoDolar = (float)17.55;
         }
 
-        public Peso(double cantidad)
+        public Peso(double cantidad) : this()
         {
             this.cantidad = cantidad;
         }
@@ -46,7 +46,7 @@ namespace Billete
         /// <param name="p"></param>
         public static explicit operator Dolar(Peso p)
         {
-            Dolar retorno = new Dolar(p.cantidad * Peso.cotizRespectoDolar);
+            Dolar retorno = new Dolar(p.cantidad / GetCotizacion());
             return retorno;
         }
 
@@ -56,7 +56,7 @@ namespace Billete
         /// <param name="p"></param>
         public static explicit operator Euro(Peso p)
         {
-            Euro retorno = new Euro(p.cantidad * Peso.cotizRespectoDolar);
+            Euro retorno = new Euro(p.cantidad / GetCotizacion());
             return retorno;
         }
 
@@ -66,7 +66,8 @@ namespace Billete
         /// <param name="p"></param>
         public static implicit operator Peso(double p)
         {
-            return (p * Peso.cotizRespectoDolar);
+            Peso aux = new Peso(p);
+            return aux;
         }
 
         /// <summary>

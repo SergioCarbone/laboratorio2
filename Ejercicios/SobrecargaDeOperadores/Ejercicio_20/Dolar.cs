@@ -52,7 +52,7 @@ namespace Billete
         /// <param name="d"></param>
         public static explicit operator Euro(Dolar d)
         {
-            Euro retorno = new Euro(d.cantidad * Dolar.GetCotizacion());
+            Euro retorno = new Euro(d.cantidad / GetCotizacion());
             return retorno;
         }
 
@@ -63,7 +63,7 @@ namespace Billete
         /// <param name="d"></param>
         public static explicit operator Peso(Dolar d)
         {
-            Peso retorno = new Peso(d.cantidad * Dolar.GetCotizacion());
+            Peso retorno = new Peso(d.cantidad / GetCotizacion());
             return retorno;
         }
 
@@ -74,7 +74,8 @@ namespace Billete
         /// <param name="d"></param>
         public static implicit operator Dolar(double d)
         {
-            return (d * Dolar.cotizRespectoDolar);
+            Dolar aux = new Dolar(d);
+            return aux;
         }
 
         /// <summary>
