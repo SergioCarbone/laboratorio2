@@ -13,7 +13,7 @@ namespace Billete
 
         private Euro()
         {
-            Euro.cotizRespectoDolar = (float)1.3642;
+            Euro.cotizRespectoDolar = (float)1.16;
         }
 
         public Euro(double cantidad) : this()
@@ -50,7 +50,7 @@ namespace Billete
         /// <param name="e"></param>
         public static explicit operator Dolar(Euro e)
         {           
-            Dolar retorno = new Dolar(e.cantidad * Dolar.GetCotizacion());
+            Dolar retorno = new Dolar(e.cantidad * GetCotizacion());
             return retorno;
         }
 
@@ -60,7 +60,7 @@ namespace Billete
         /// <param name="e"></param>
         public static explicit operator Peso(Euro e)
         {
-            Peso retorno = new Peso(e.cantidad * GetCotizacion());
+            Peso retorno = new Peso(e.cantidad * Euro.GetCotizacion() * Peso.GetCotizacion());
             return retorno;
         }
 
