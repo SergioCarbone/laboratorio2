@@ -14,11 +14,22 @@ namespace Ejercicio_33_Libreria
         {
             get
             {
-                return paginas[i];
+                if(paginas.Count <= i)
+                {
+                    return paginas[i];
+                }
+                return "";
             }
             set
             {
-                paginas[i] = value;
+                if(paginas.Count >= i)
+                {
+                    paginas.Add(value);
+                }
+                else
+                {
+                    paginas[i] = value;
+                }
             }
         }
     }
