@@ -56,10 +56,36 @@ namespace Ejercicio_37_libreria
                         break;
 
 
-                        return resultado;
+                       
                 }
             }
+            return resultado;
         }
+
+        public string mostrar()
+        {
+            StringBuilder datos = new StringBuilder();
+            datos.AppendFormat("La razon social es:{0}", this.razonSocial);
+            datos.AppendLine();
+            datos.AppendFormat("Ganancia Total :{0}", this.CalcularGanancia(Llamada.TipoLlamada.Todas));
+            datos.AppendFormat("Ganancia Local :{0}", this.CalcularGanancia(Llamada.TipoLlamada.Local));
+            datos.AppendFormat("Ganancia Provincial :{0}", this.CalcularGanancia(Llamada.TipoLlamada.Provincial));
+
+            foreach (Llamada llamada in this.listaLlamadas)
+            {
+                datos.AppendFormat("Numero destino :{0}", llamada.NroDestino);
+                datos.AppendLine();
+                datos.AppendFormat("Numero Origen  :{0}", llamada.NroOrigen);
+                datos.AppendLine();
+                datos.AppendFormat("Numero Duracion :{0}", llamada.Duracion);
+                datos.AppendLine();
+
+            }
+
+            return datos.ToString();
+
+        }
+
 
     }
 }
