@@ -8,38 +8,44 @@ namespace Ejercicio_37_libreria
 {
     public class Provincial : Llamada
     {
-       public enum Franja
+        #region Enumerado
+        public enum Franja
         {
             Franja_1,
             Franja_2,
             Franja_3,
         }
+        #endregion
 
         protected Franja franjaHoraria;
 
-        public float CostoLlamada
-        {
-            get
-            {
-                return CalcularCosto();
-            }
-        }
+        #region Propiedades
 
+        public float CostoLlamada { get { return this.CalcularCosto(); } }
 
+        #endregion
 
-        public Provincial(Franja miFranja, Llamada llamada)
-            : this(llamada.NroOrigen, miFranja,llamada.Duracion, llamada.NroDestino)
+        #region Metodos
+
+        public Provincial(Franja franjaHoraria, Llamada llamada)
+            : this(llamada.NroOrigen,franjaHoraria,llamada.Duracion,llamada.NroDestino)
         {
 
         }
 
-
-        public Provincial(string origen, Franja miFranja, float duracion, string destino) 
-            :base(duracion,destino,origen)
+        public Provincial(string origen, Franja franjaHoraria, float duracion, string destino)
+            : base(duracion,destino,origen)
         {
-            this.franjaHoraria = miFranja;
+            this.franjaHoraria = franjaHoraria;
         }
 
+
+        public string Mostrar()
+        {
+            StringBuilder datos = new StringBuilder(base.Mostrar());
+            datos.AppendFormat("Franja horaria: {0}", this.franjaHoraria);
+            return datos.ToString();
+        }
 
 
         private float CalcularCosto()
@@ -48,25 +54,19 @@ namespace Ejercicio_37_libreria
             switch (this.franjaHoraria)
             {
                 case Franja.Franja_1:
-                    retorno = this.duracion * (float)0.99;
+                    retorno = this.Duracion * (float)0.99;
                     break;
                 case Franja.Franja_2:
-                    retorno = this.duracion * (float)1.25;
+                    retorno = this.Duracion * (float)1.25;
                     break;
                 case Franja.Franja_3:
-                    retorno = this.duracion * (float)0.66;
+                    retorno = this.Duracion * (float)0.66;
                     break;               
             }
             return retorno;
         }
 
-        public string Mostrar()
-        {
-            StringBuilder datos = new StringBuilder(base.Mostrar());
-            datos.AppendLine();
-            datos.AppendFormat("El Costo es :{0}", this.CostoLlamada);
 
-            return datos.ToString();
-        }
+        #endregion
     }
 }

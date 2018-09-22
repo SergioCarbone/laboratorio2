@@ -8,47 +8,42 @@ namespace Ejercicio_37_libreria
 {
     public class Local : Llamada
     {
-
         protected float costo;
 
-        public float CostoLlamada
+        #region Propiedades
+
+        public float Costo { get { return CalcularCosto(); } }
+
+        #endregion
+
+        #region Metodos
+
+        public Local(Llamada llamada, float costo) 
+            : this(llamada.NroOrigen,llamada.Duracion,llamada.NroDestino,costo)
         {
-            get
-            {
-                return this.costo;
-
-            }
-
 
         }
 
-        public Local(Llamada llamada,float costo)
-            :this(llamada.NroOrigen,llamada.Duracion,llamada.NroDestino,costo)
-        {
-
-
-        }
-
-
-        public Local(string origen,float duracion,string destino,float costo) 
+        public Local(string origen, float duracion, string destino, float costo) 
             :base(duracion,destino,origen)
         {
             this.costo = costo;
-
         }
+
+
+        public string Mostrar()
+        {
+            StringBuilder datosLlamada = new StringBuilder(base.Mostrar());
+            datosLlamada.AppendLine();
+            datosLlamada.AppendFormat("Costo llamada: {0}", this.Costo);
+            return datosLlamada.ToString();
+        }
+
 
         private float CalcularCosto()
         {
-            return this.costo * this.Duracion;
+            return (this.duracion * this.costo);
         }
-        public string  Mostrar()
-        {
-            StringBuilder datos = new StringBuilder(base.Mostrar());
-            datos.AppendLine();
-            datos.AppendFormat("El Costo es :{0}", this.costo);
-
-            return datos.ToString();
-        }
-
+        #endregion
     }
 }

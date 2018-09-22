@@ -11,59 +11,45 @@ namespace Ejercicio_37_libreria
         protected float duracion;
         protected string nroDestino, nroOrigen;
 
-        public float Duracion
-        {
-            get
-            {
-                return this.duracion;
-            }
-        }
+        #region Propiedades
+        public float Duracion { get { return this.duracion; } }
+        public string NroOrigen { get { return this.nroOrigen; } }
+        public string NroDestino { get { return this.nroDestino; } }
+        #endregion
 
-        public string NroDestino
-        {
-            get
-            {
-                return this.nroDestino;
-            }
-        }
-
-        public string NroOrigen
-        {
-            get
-            {
-                return this.nroOrigen;
-            }
-        }
-
+        #region Metodos
         public Llamada(float duracion, string nroDestino, string nroOrigen)
         {
             this.duracion = duracion;
-            this.nroDestino = nroDestino;
             this.nroOrigen = nroOrigen;
+            this.nroDestino = nroDestino;
         }
+
 
         public string Mostrar()
         {
             StringBuilder datosLlamada = new StringBuilder();
-            datosLlamada.AppendFormat("Nro origen: {0}", this.nroOrigen);
+            datosLlamada.AppendFormat("Numero origen: {0}", this.NroOrigen);
             datosLlamada.AppendLine();
-            datosLlamada.AppendFormat("Nro destino: {0}", this.nroDestino);
+            datosLlamada.AppendFormat("Numero destino: {0}", this.NroDestino);
             datosLlamada.AppendLine();
-            datosLlamada.AppendFormat("Duracion: {0}", this.duracion);
+            datosLlamada.AppendFormat("Duracion: {0}", this.Duracion);
             return datosLlamada.ToString();
         }
 
-        public static int OrdenarPorDuracion(Llamada llamada1, Llamada llamada2)
+        public static int OrdenarPorDuracion(Llamada l1, Llamada l2)
         {
-            return (llamada1.duracion.CompareTo(llamada2.duracion));
+            return l1.duracion.CompareTo(l2.duracion);
         }
+        #endregion
 
-
+        #region Enumerado
         public enum TipoLlamada
         {
             Local,
             Provincial,
             Todas,
         }
+        #endregion
     }
 }

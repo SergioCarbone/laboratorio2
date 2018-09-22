@@ -8,84 +8,85 @@ namespace Ejercicio_37_libreria
 {
     public class Centralita
     {
-        private List<Llamada> listaLlamadas;
+        private List<Llamada> listaDeLlamadas;
         protected string razonSocial;
+
+        #region Propiedades
+
+        public float GananciasPorLocal { get { return this.CalcularGanancia(Llamada.TipoLlamada.Local); } }
+        public float GananciasPorProvincial { get { return this.CalcularGanancia(Llamada.TipoLlamada.Provincial); } }
+        public float GananciasPorTotal { get { return this.CalcularGanancia(Llamada.TipoLlamada.Todas); } }
+        public List<Llamada> Llamadas { get { return this.listaDeLlamadas; } }
+        #endregion
+
+        #region Metodos
 
         public Centralita()
         {
-            listaLlamadas = new List<Llamada>();
+            listaDeLlamadas = new List<Llamada>();
+        }
 
-        }
-        public Centralita(string nombreEmpresa) :this()
+        public Centralita(string nombreEmpresa) : this()
         {
-            this.razonSocial= nombreEmpresa;
+            this.razonSocial = nombreEmpresa;
         }
+
+
         private float CalcularGanancia(Llamada.TipoLlamada tipo)
         {
-            float resultado=0;
-            foreach (Llamada llamada  in listaLlamadas)
+            float retorno = 0;
+            foreach (Llamada llamada in listaDeLlamadas)
             {
-              
-
                 switch (tipo)
                 {
-
-
                     case Llamada.TipoLlamada.Local:
                         if(llamada is Local)
                         {
-                            resultado += ((Local)llamada).CostoLlamada;
+                            retorno += ((Local)llamada).Costo;
                         }
                         break;
                     case Llamada.TipoLlamada.Provincial:
-                        if (llamada is Provincial)
+                        if(llamada is Provincial)
                         {
-                            resultado += ((Provincial)llamada).CostoLlamada;
+                            retorno += ((Provincial)llamada).CostoLlamada;
                         }
                         break;
                     case Llamada.TipoLlamada.Todas:
-                        if (llamada is Local)
+                        if(llamada is Local)
                         {
-                            resultado += ((Local)llamada).CostoLlamada;
+                            retorno += ((Local)llamada).Costo;
                         }
-                        else
+                        else if(llamada is Provincial)
                         {
-                            resultado += ((Provincial)llamada).CostoLlamada;
+                            retorno += ((Provincial)llamada).CostoLlamada;
                         }
-
-                        break;
-
-
-                       
+                        break;                  
                 }
             }
-            return resultado;
+            return retorno;
         }
 
-        public string mostrar()
+
+        public string Mostrar()
         {
             StringBuilder datos = new StringBuilder();
-            datos.AppendFormat("La razon social es:{0}", this.razonSocial);
-            datos.AppendLine();
-            datos.AppendFormat("Ganancia Total :{0}", this.CalcularGanancia(Llamada.TipoLlamada.Todas));
-            datos.AppendFormat("Ganancia Local :{0}", this.CalcularGanancia(Llamada.TipoLlamada.Local));
-            datos.AppendFormat("Ganancia Provincial :{0}", this.CalcularGanancia(Llamada.TipoLlamada.Provincial));
-
-            foreach (Llamada llamada in this.listaLlamadas)
+            datos.AppendFormat("Razon social: {0}", this.razonSocial);            
+            datos.AppendFormat("\nGanancias locales: {0}", this.GananciasPorLocal);
+            datos.AppendFormat("\nGanancias provinciales: {0}", this.GananciasPorProvincial);
+            datos.AppendFormat("\nGanancias totales: {0}", this.GananciasPorTotal);
+            foreach (Llamada llamada in listaDeLlamadas)
             {
-                datos.AppendFormat("Numero destino :{0}", llamada.NroDestino);
                 datos.AppendLine();
-                datos.AppendFormat("Numero Origen  :{0}", llamada.NroOrigen);
-                datos.AppendLine();
-                datos.AppendFormat("Numero Duracion :{0}", llamada.Duracion);
-                datos.AppendLine();
-
+                datos.AppendFormat("\n{0}", llamada.Mostrar());
             }
-
             return datos.ToString();
-
         }
 
 
+        public void OrdenarLlamadas()
+        {
+            listaDeLlamadas.Sort(Llamada.OrdenarPorDuracion);
+        }
+        #endregion
     }
 }
