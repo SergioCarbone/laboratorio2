@@ -67,17 +67,14 @@ namespace Ejercicio_36_libreria
         public static bool operator +(Competencia c, VehiculoDeCarrera v)
         {
             bool retorno = false;
-            //if(c == v)
-            //{
+            if(c == v)
+            {
                 if (c.competidores.Count < c.cantidadCompetidores)
                 {
-                    if (c != v)
-                    {
-                        AgregarCompetidor(c, v);
-                        retorno = true;
-                    }
+                    AgregarCompetidor(c, v);
+                    retorno = true;
                 }
-           // }
+            }
             return retorno;
         }
 
@@ -96,11 +93,11 @@ namespace Ejercicio_36_libreria
         {
             bool retorno = false;
             
-            if(c.Tipo == TipoCompetencia.AutoF1 && v.Equals(TipoCompetencia.AutoF1))
+            if(c.Tipo == TipoCompetencia.AutoF1 && v is AutoF1)
             {
                 retorno = true;
             }
-            else if(c.Tipo == TipoCompetencia.MotoCross && v.Equals(TipoCompetencia.MotoCross))
+            else if(c.Tipo == TipoCompetencia.MotoCross && v is AutoF1)
             {
                 retorno = true;
             }

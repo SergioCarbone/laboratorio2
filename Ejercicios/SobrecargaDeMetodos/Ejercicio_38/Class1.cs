@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Ejercicio_38
 {
     public class Class1
-    {
+    {    
         public override string ToString()
         {
             return "¡Este es mi método ToString sobreescrito!";
@@ -15,19 +15,14 @@ namespace Ejercicio_38
 
         public override bool Equals(object obj)
         {
-            return base.Equals(obj);
+            return base.GetType() == obj.GetType();
         }
 
 
-        public string A()
-        {
-            return "1142510187";
-        }
-
-
+       
         public override int GetHashCode()
         {
-            return A().GetHashCode();
+            return 1142510187;
         }
     }
 }

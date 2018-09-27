@@ -23,22 +23,23 @@ namespace Ejercicio_36
 
             if (monaco + a1)
             {
-                if (monaco + a2)
-                {
-                    if (monaco + a3)
-                    {
-                        //if (monaco + m4)
-                        //{                            
-                            Console.WriteLine(monaco.MostrarDatos());
-                        //}
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Error");
-                }
+                Console.WriteLine("a1");  
             }
-           
+
+            if (monaco + a2)
+            {
+                Console.WriteLine("a2");
+            }
+
+            if (monaco + a3)
+            {
+                Console.WriteLine("a3");
+            }
+            if(monaco + m4)
+            {
+                Console.WriteLine("m4");
+            }
+
             Console.ReadKey();
             Console.Clear();
 
