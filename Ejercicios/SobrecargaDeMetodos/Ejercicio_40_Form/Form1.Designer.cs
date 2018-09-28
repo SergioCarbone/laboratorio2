@@ -1,6 +1,6 @@
 ﻿namespace Ejercicio_40_Form
 {
-    partial class Form1
+    partial class FrmMenu
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,33 +28,88 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGenerarLlamada = new System.Windows.Forms.Button();
+            this.btnFactTotal = new System.Windows.Forms.Button();
+            this.btnFactLocal = new System.Windows.Forms.Button();
+            this.btnFacProvincial = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnGenerarLlamada
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 37);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Generaa";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnGenerarLlamada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarLlamada.Location = new System.Drawing.Point(42, 12);
+            this.btnGenerarLlamada.Name = "btnGenerarLlamada";
+            this.btnGenerarLlamada.Size = new System.Drawing.Size(154, 37);
+            this.btnGenerarLlamada.TabIndex = 0;
+            this.btnGenerarLlamada.Text = "Generar Llamada";
+            this.btnGenerarLlamada.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // btnFactTotal
+            // 
+            this.btnFactTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFactTotal.Location = new System.Drawing.Point(42, 67);
+            this.btnFactTotal.Name = "btnFactTotal";
+            this.btnFactTotal.Size = new System.Drawing.Size(154, 37);
+            this.btnFactTotal.TabIndex = 1;
+            this.btnFactTotal.Text = "Facturacion Total";
+            this.btnFactTotal.UseVisualStyleBackColor = true;
+            // 
+            // btnFactLocal
+            // 
+            this.btnFactLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFactLocal.Location = new System.Drawing.Point(42, 123);
+            this.btnFactLocal.Name = "btnFactLocal";
+            this.btnFactLocal.Size = new System.Drawing.Size(154, 37);
+            this.btnFactLocal.TabIndex = 2;
+            this.btnFactLocal.Text = "Facturacion Local";
+            this.btnFactLocal.UseVisualStyleBackColor = true;
+            // 
+            // btnFacProvincial
+            // 
+            this.btnFacProvincial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFacProvincial.Location = new System.Drawing.Point(42, 179);
+            this.btnFacProvincial.Name = "btnFacProvincial";
+            this.btnFacProvincial.Size = new System.Drawing.Size(154, 38);
+            this.btnFacProvincial.TabIndex = 3;
+            this.btnFacProvincial.Text = "Facturacion Provincial";
+            this.btnFacProvincial.UseVisualStyleBackColor = true;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(42, 236);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(154, 37);
+            this.btnSalir.TabIndex = 4;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(178, 307);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(252, 297);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnFacProvincial);
+            this.Controls.Add(this.btnFactLocal);
+            this.Controls.Add(this.btnFactTotal);
+            this.Controls.Add(this.btnGenerarLlamada);
+            this.Name = "FrmMenu";
             this.Text = "Central Telefonica";
+            this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGenerarLlamada;
+        private System.Windows.Forms.Button btnFactTotal;
+        private System.Windows.Forms.Button btnFactLocal;
+        private System.Windows.Forms.Button btnFacProvincial;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 
