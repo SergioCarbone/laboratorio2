@@ -56,6 +56,7 @@ namespace Entidades
         {
             get
             {
+                distanciaRecorrida = new Random();
                 return distanciaRecorrida.Next(1, 10);                 
             }
         }
@@ -70,13 +71,13 @@ namespace Entidades
 
         public Animal(int cantPatas, int velocidadMaxima) : this()
         {
-            this.CantidadPatas = cantidadPatas;
+            this.CantidadPatas = cantPatas;
             this.VelocidadMaxima = velocidadMaxima;
         }
 
-        public virtual string MostrarDatos()
+        public string MostrarDatos()
         {
-            StringBuilder datos = new StringBuilder();
+            StringBuilder datos = new StringBuilder();            
             datos.AppendFormat("\nCantidad de patas: {0}", this.CantidadPatas);
             datos.AppendFormat("\nVelocidad maxima: {0}", this.VelocidadMaxima);
             datos.AppendFormat("\nDistancia recorrida: {0}", this.DistanciaRecorrida);
