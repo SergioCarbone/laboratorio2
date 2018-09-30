@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("VistaForm")]
+[assembly: AssemblyTitle("Carbone.Sergio.2C")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("VistaForm")]
+[assembly: AssemblyProduct("Carbone.Sergio.2C")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("15302d5e-f5a7-47f5-8a1c-789297eeba30")]
+[assembly: Guid("58d2b128-cb90-4af7-b56f-b8c90bf48522")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //

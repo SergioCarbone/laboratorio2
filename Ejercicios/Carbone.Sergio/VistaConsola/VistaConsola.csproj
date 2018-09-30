@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{312385B8-5244-4F3F-A918-5853C36FE0FC}</ProjectGuid>
+    <ProjectGuid>{510FEF16-8B74-4CA2-9B2D-B4969CEF6F13}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>VistaConsola</RootNamespace>
     <AssemblyName>VistaConsola</AssemblyName>
@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
-      <Project>{d80fa6ec-4517-4295-91ce-abc180a4cc8a}</Project>
+      <Project>{4f8d6e7b-a80b-41c8-9282-f0b5c27aa3de}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
   </ItemGroup>

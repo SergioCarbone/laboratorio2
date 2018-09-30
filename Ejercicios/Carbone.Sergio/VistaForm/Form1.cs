@@ -13,44 +13,40 @@ namespace VistaForm
 {
     public partial class Form1 : Form
     {
-        Curso c;
+        Curso curso;
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void btnCrearCurso_Click(object sender, EventArgs e)
+        private void BntCrear_Click(object sender, EventArgs e)
         {
             Divisiones division;
-            Enum.TryParse<Divisiones>(cmbDivCurso.SelectedValue.ToString(), out division);
+            Enum.TryParse<Divisiones>(cmbDivisonCurso.SelectedValue.ToString(), out division);
 
-            Profesor profesor = new Profesor(txtNombreCurso.Text, txtApCurso.Text,
-                txtDniCurso.Text,dateTimeCurso.Value);
+            Profesor profe = new Profesor(txtNombreProfe.Text, txtApellidoProfe.Text, txtDniProfe.Text,dtpFechaIngreso.Value);
+            curso = new Curso((short)nudAnioCurso.Value, division, profe);
+        }
 
-             c = new Curso((short)numAñoAlumno.Value,division,profesor);
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            cmbDivision.DataSource = Enum.GetValues(typeof(Divisiones));
+            cmbDivisonCurso.DataSource = Enum.GetValues(typeof(Divisiones));
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             Divisiones division;
-            Enum.TryParse<Divisiones>(cmbDivisionAlumno.SelectedValue.ToString(), out division);
+            Enum.TryParse<Divisiones>(cmbDivision.SelectedValue.ToString(), out division);
+            short anio = (short)nudAnio.Value;
+            Alumno alumno = new Alumno(txtNombre.Text, txtApellido.Text, txtLegajo.Text, anio, division);
 
-            Alumno a = new Alumno(txtNombreAlumbo.Text, txtApAlumno.Text,
-                txtLegajo.Text, (short)numAñoAlumno.Value, division);
-
-            this.c += a;
+            curso += alumno;
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-
-            richTextBox1.Text = (string)c;
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            cmbDivCurso.DataSource = Enum.GetValues(typeof(Divisiones));
-            cmbDivisionAlumno.DataSource = Enum.GetValues(typeof(Divisiones));
+            richTextBox1.Text = (string)curso;
         }
     }
 }

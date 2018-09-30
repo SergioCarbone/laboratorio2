@@ -11,12 +11,11 @@ namespace VistaConsola
     {
         static void Main(string[] args)
         {
-            Console.Title = "Practica parcial";
+            Console.Title = "Examen de Carbone Sergio";
             Console.ForegroundColor = ConsoleColor.Green;
 
             // Genero un curso nuevo
-            Curso curso = new Curso(2, Divisiones.A, new Profesor("Fede", "Dávila", "12345678", new
-            DateTime(2015, 03, 20)));
+            Curso curso = new Curso(2, Divisiones.A, new Profesor("Fede", "Dávila", "12345678", new DateTime(2015, 03, 20)));
             // Genero alumnos...
             Alumno a1 = new Alumno("Juan", "López", "22-3333-2", 2, Divisiones.A);
             Alumno a2 = new Alumno("José", "Martínez", "23-3343-6", 2, Divisiones.B);
@@ -28,10 +27,9 @@ namespace VistaConsola
             curso += a2;
             curso += a3;
             curso += a4;
-            curso += a5;           
-            // Imprimo los datos del curso
-            Console.WriteLine((string)curso);
-            Console.ReadKey();
+            curso += a5;
+            // Imprimo los datos del curso 
+            Console.WriteLine((string)curso); Console.ReadKey();
         }
     }
 }

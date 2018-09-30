@@ -11,7 +11,8 @@ namespace Entidades
         private short anio;
         private Divisiones division;
 
-        #region Propiedades
+        #region Propiedad
+
         public string AnioDivision
         {
             get
@@ -19,7 +20,6 @@ namespace Entidades
                 return string.Format("{0}º{1}", this.anio, this.division);
             }
         }
-
         #endregion
 
         #region Metodos
@@ -34,36 +34,34 @@ namespace Entidades
         public override string ExponerDatos()
         {
             StringBuilder datos = new StringBuilder(base.ExponerDatos());
-            datos.AppendFormat("\nAnio y divicion: {0}", this.AnioDivision);
+            datos.AppendFormat("\nAño y Division: {0}", this.AnioDivision);
             return datos.ToString();
         }
 
         protected override bool ValidarDocumentacion(string doc)
         {
             bool retorno = false;
-            int cont = 0;
-            if(doc.Length == 9)
+            short cont = 0;
+            if (doc.Length == 9)
             {
-                for (int i = 0; i < doc.Length; i++)
+                for(int i = 0; i < doc.Length; i++)
                 {
-                    if (doc[i] == '-' && (i == 7 || i == 2) )
+                    if (doc[i] == '-' && (i == 2 || i == 7))
                     {
                         cont++;
                     }
-                    else if(!(doc[i] >= '0' && doc[i] <= '9'))
+                    else if(!char.IsNumber(doc[i]))
                     {
                         break;
                     }
-
-                    if (cont == 2 && i == doc.Length-1)
-                    {
-                        retorno = true;
-                    }
                 }
-            }           
+                if(cont == 2)
+                {
+                    retorno = true;
+                }
+            }
             return retorno;
         }
-
 
 
         #endregion

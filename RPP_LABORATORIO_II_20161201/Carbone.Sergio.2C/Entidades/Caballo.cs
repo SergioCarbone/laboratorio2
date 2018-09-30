@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public enum Divisiones
+    class Caballo
     {
-        A,
-        B,
-        C,
-        D,
-        E,
     }
 }

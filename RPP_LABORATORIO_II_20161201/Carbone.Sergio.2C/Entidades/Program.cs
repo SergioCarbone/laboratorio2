@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public enum Divisiones
+    class Program
     {
-        A,
-        B,
-        C,
-        D,
-        E,
+        static void Main(string[] args)
+        {
+        }
     }
 }

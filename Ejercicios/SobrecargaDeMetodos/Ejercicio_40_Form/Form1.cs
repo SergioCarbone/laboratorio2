@@ -13,8 +13,7 @@ namespace Ejercicio_40_Form
 {
     public partial class FrmMenu : Form
     {
-
-        public Centralita central;
+        Centralita centralita = new Centralita();        
 
         public FrmMenu()
         {
@@ -29,6 +28,14 @@ namespace Ejercicio_40_Form
         private void FrmMenu_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnGenerarLlamada_Click(object sender, EventArgs e)
+        {
+            Form2 llamador = new Form2(centralita);            
+            llamador.ShowDialog();
+            this.Hide();
+
         }
     }
 }

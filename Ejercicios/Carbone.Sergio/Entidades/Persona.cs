@@ -8,9 +8,12 @@ namespace Entidades
 {
     public abstract class Persona
     {
-        private string apellido, nombre, documento;
+        private string nombre;
+        private string apellido;
+        private string documento;
 
         #region Propiedades
+
         public string Apellido
         {
             get
@@ -35,7 +38,7 @@ namespace Entidades
             }
             set
             {
-                if(this.ValidarDocumentacion(value))
+                if(ValidarDocumentacion(value))
                 {
                     this.documento = value;
                 }
@@ -45,18 +48,7 @@ namespace Entidades
 
         #region Metodos
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        public virtual string ExponerDatos()
-        {
-            StringBuilder datos = new StringBuilder();
-            datos.AppendFormat("\nNombre: {0}", this.Nombre);
-            datos.AppendFormat("\nApellido: {0}", this.Apellido);
-            datos.AppendFormat("\nDocumento: {0}", this.Documento);
-            return datos.ToString();
-        }
+        protected abstract bool ValidarDocumentacion(string doc);
 
         public Persona(string nombre, string apellido, string documento)
         {
@@ -65,7 +57,14 @@ namespace Entidades
             this.Documento = documento;
         }
 
-        protected abstract bool ValidarDocumentacion(string doc);
+        public virtual string ExponerDatos()
+        {
+            StringBuilder datos = new StringBuilder();
+            datos.AppendFormat("\nNombre: {0}", this.nombre);
+            datos.AppendFormat("\nApellido: {0}", this.apellido);
+            datos.AppendFormat("\nDocumento: {0}", this.Documento);
+            return datos.ToString();
+        }
 
 
         #endregion

@@ -44,6 +44,7 @@
             this.btnGenerarLlamada.TabIndex = 0;
             this.btnGenerarLlamada.Text = "Generar Llamada";
             this.btnGenerarLlamada.UseVisualStyleBackColor = true;
+            this.btnGenerarLlamada.Click += new System.EventHandler(this.btnGenerarLlamada_Click);
             // 
             // btnFactTotal
             // 
@@ -97,6 +98,7 @@
             this.Controls.Add(this.btnFactTotal);
             this.Controls.Add(this.btnGenerarLlamada);
             this.Name = "FrmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Central Telefonica";
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.ResumeLayout(false);

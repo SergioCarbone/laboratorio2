@@ -13,7 +13,7 @@ namespace Entidades
         private Divisiones division;
         private Profesor profesor;
 
-        #region Propiedades
+        #region Propiedad
 
         public string AnioDivision
         {
@@ -39,21 +39,19 @@ namespace Entidades
             this.profesor = profesor;
         }
 
-
         public static explicit operator string(Curso c)
         {
-            StringBuilder datosCurso = new StringBuilder();
-            datosCurso.AppendFormat("\nProfesor: {0}", c.profesor.ExponerDatos());
-            datosCurso.AppendFormat("\nAnio y division: {0}", c.AnioDivision);
-            datosCurso.AppendLine();
-            foreach (Alumno al in c.alumnos)
+            StringBuilder datos = new StringBuilder();
+            datos.AppendFormat("\nProfesor {0}", c.profesor.ExponerDatos());            
+            datos.AppendFormat("\nAño y Division: {0}", c.AnioDivision);
+            datos.AppendLine();
+            foreach (Alumno aux in c.alumnos)
             {
-                datosCurso.AppendFormat(al.ExponerDatos());
-                datosCurso.AppendLine();
+                datos.AppendLine();
+                datos.AppendFormat(aux.ExponerDatos());
             }
-            return datosCurso.ToString();
+            return datos.ToString();
         }
-
 
         public static bool operator ==(Curso c, Alumno a)
         {
@@ -62,7 +60,7 @@ namespace Entidades
             {
                 retorno = true;
             }
-            return retorno;            
+            return retorno;
         }
 
         public static bool operator !=(Curso c, Alumno a)
@@ -70,12 +68,11 @@ namespace Entidades
             return (!(c == a));
         }
 
-
         public static Curso operator +(Curso c, Alumno a)
-        {            
+        {
             if(c == a)
             {
-                c.alumnos.Add(a);                
+                c.alumnos.Add(a);
             }
             return c;
         }
