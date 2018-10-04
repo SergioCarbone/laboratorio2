@@ -41,5 +41,10 @@ namespace Carbone.Sergio._2C
         {
             rtbSalida.Text = carrera.MostrarCarrera();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,7 +30,15 @@ namespace Ejercicio_40_libreria
 
         public static bool operator ==(Llamada l1, Llamada l2)
         {
-            return l1.Equals(l2);
+            bool retorno = false;
+            if(l1.Equals(l2))
+            {
+                if(l1.NroDestino == l2.NroDestino && l1.NroOrigen == l2.NroOrigen)
+                {
+                    retorno = true;
+                }
+            }
+            return retorno;
         }
 
 

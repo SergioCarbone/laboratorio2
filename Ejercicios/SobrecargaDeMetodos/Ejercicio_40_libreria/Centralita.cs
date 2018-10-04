@@ -13,10 +13,37 @@ namespace Ejercicio_40_libreria
 
         #region Propiedades
 
-        public float GananciasPorLocal { get { return this.CalcularGanancia(Llamada.TipoLlamada.Local); } }
-        public float GananciasPorProvincial { get { return this.CalcularGanancia(Llamada.TipoLlamada.Provincial); } }
-        public float GananciasPorTotal { get { return this.CalcularGanancia(Llamada.TipoLlamada.Todas); } }
-        public List<Llamada> Llamadas { get { return this.listaDeLlamadas; } }
+        public float GananciasPorLocal
+        { get
+            {
+                return this.CalcularGanancia(Llamada.TipoLlamada.Local);
+            }
+        }
+
+        public float GananciasPorProvincial
+        {
+            get
+            {
+                return this.CalcularGanancia(Llamada.TipoLlamada.Provincial);
+            }
+        }
+
+        public float GananciasPorTotal
+        {
+            get
+            {
+                return this.CalcularGanancia(Llamada.TipoLlamada.Todas);
+            }
+        }
+
+        public List<Llamada> Llamadas
+        {
+            get
+            {
+                return this.listaDeLlamadas;
+            }
+        }
+
         #endregion
 
         #region Metodos

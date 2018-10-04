@@ -18,7 +18,7 @@ namespace Carbone.Sergio._2C
         }
         #endregion
 
-        private Deportes deporte;
+        private static Deportes deporte;
         private DirectorTecnico dt;
         private List<Jugador> jugadores;
         private string nombre;
@@ -28,14 +28,17 @@ namespace Carbone.Sergio._2C
         {
             set
             {
-                this.deporte = value;
+                deporte = value;
             }
         }
         #endregion
 
-        private Equipo()
+        static Equipo()
         {
-            this.deporte = Deportes.Futbol;
+            deporte = Deportes.Futbol;
+        }
+        private Equipo()
+        {            
             jugadores = new List<Jugador>();
         }
 
@@ -46,10 +49,10 @@ namespace Carbone.Sergio._2C
             this.dt = dt;
         }
 
-        public Equipo(string nombre, DirectorTecnico dt, Deportes deporte)
+        public Equipo(string nombre, DirectorTecnico dt, Deportes dep)
             : this(nombre, dt)
         {
-            this.deporte = deporte;
+            deporte = dep;
         }
 
 
@@ -91,7 +94,7 @@ namespace Carbone.Sergio._2C
         public static implicit operator string(Equipo e)
         {
             StringBuilder datos = new StringBuilder();
-            datos.AppendFormat("**{0} {1}**", e.nombre, e.deporte);
+            datos.AppendFormat("**{0} {1}**", e.nombre, Equipo.deporte);
             datos.AppendFormat("\nNomina de jugadores:");
 
             foreach (Jugador aux in e.jugadores)

@@ -41,10 +41,19 @@ namespace Sergio
             return this.Ficha();
         }
 
-        //public override bool Equals(object obj)
-        //{
+        public override bool Equals(object obj)
+        {
+            bool retorno = false;
 
-        //}
+            if(obj is Gato)
+            {
+                if(this == obj)//(Gato)
+                {
+                    retorno = true;
+                }
+            }
+            return retorno;
+        }
         #endregion
     }
 }

@@ -10,7 +10,7 @@ namespace Sergio
     {
         private List<Mascota> manada;
         private string nombre;
-        private TipoManada tipo;
+        private static TipoManada tipo;
 
         #region Enumerado
 
@@ -27,16 +27,19 @@ namespace Sergio
         {
             set
             {
-                this.tipo = value;
+                tipo = value;
             }
         }
         #endregion
 
         #region Metodos
 
-        private Grupo()
+        static Grupo()
         {
-            Tipo = TipoManada.Unica;
+            tipo = TipoManada.Unica;
+        }
+        private Grupo()
+        {            
             manada = new List<Mascota>();
         }
 
@@ -66,6 +69,7 @@ namespace Sergio
             return (!(g == m));
         }
 
+
         public static Grupo operator +(Grupo g, Mascota m)
         {
             if(!(g == m))
@@ -87,7 +91,7 @@ namespace Sergio
         public static implicit operator string(Grupo g)
         {
             StringBuilder datos = new StringBuilder();
-            datos.AppendFormat("**{0} {1}**", g.nombre,g.tipo);
+            datos.AppendFormat("**{0} {1}**", g.nombre,Grupo.tipo);
             datos.AppendFormat("\nIntegrantes: ");
             foreach (Mascota aux in g.manada)
             {
@@ -96,6 +100,7 @@ namespace Sergio
             }
             return datos.ToString();
         }
+        
         #endregion
     }
 }

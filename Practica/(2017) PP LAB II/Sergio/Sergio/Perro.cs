@@ -84,10 +84,18 @@ namespace Sergio
             return (!(p1 == p2));
         }
 
-        //public override bool Equals(object obj)
-        //{
-
-        //}
+        public override bool Equals(object obj)
+        {
+            bool retorno = false;
+            if(obj is Perro)
+            {
+                if(this == (Perro)obj)
+                {
+                    retorno = true;
+                }
+            }
+            return retorno;
+        }
 
         public override string ToString()
         {

@@ -56,7 +56,7 @@ namespace Entidades
         {
             get
             {
-                distanciaRecorrida = new Random();
+                
                 return distanciaRecorrida.Next(1, 10);                 
             }
         }
@@ -64,12 +64,12 @@ namespace Entidades
 
         #region Metodos
 
-        private Animal()
+        static Animal()
         {
-            
+            distanciaRecorrida = new Random();
         }
 
-        public Animal(int cantPatas, int velocidadMaxima) : this()
+        public Animal(int cantPatas, int velocidadMaxima)
         {
             this.CantidadPatas = cantPatas;
             this.VelocidadMaxima = velocidadMaxima;

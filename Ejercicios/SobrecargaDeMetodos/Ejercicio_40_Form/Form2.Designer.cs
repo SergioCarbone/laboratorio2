@@ -30,7 +30,7 @@
         {
             this.txtNumOrigen = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button15 = new System.Windows.Forms.Button();
+            this.btnNumeral = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
@@ -42,7 +42,7 @@
             this.btn3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLlamar = new System.Windows.Forms.Button();
             this.cmbFranja = new System.Windows.Forms.ComboBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -59,10 +59,11 @@
             this.txtNumOrigen.Size = new System.Drawing.Size(394, 40);
             this.txtNumOrigen.TabIndex = 0;
             this.txtNumOrigen.Text = "Nro Origen";
+            this.txtNumOrigen.TextChanged += new System.EventHandler(this.txtNumOrigen_TextChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button15);
+            this.groupBox1.Controls.Add(this.btnNumeral);
             this.groupBox1.Controls.Add(this.btn0);
             this.groupBox1.Controls.Add(this.button13);
             this.groupBox1.Controls.Add(this.btn9);
@@ -79,16 +80,17 @@
             this.groupBox1.Size = new System.Drawing.Size(177, 235);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Panel";
             // 
-            // button15
+            // btnNumeral
             // 
-            this.button15.Location = new System.Drawing.Point(115, 174);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(48, 39);
-            this.button15.TabIndex = 11;
-            this.button15.Text = "#";
-            this.button15.UseVisualStyleBackColor = true;
+            this.btnNumeral.Location = new System.Drawing.Point(115, 174);
+            this.btnNumeral.Name = "btnNumeral";
+            this.btnNumeral.Size = new System.Drawing.Size(48, 39);
+            this.btnNumeral.TabIndex = 11;
+            this.btnNumeral.Text = "#";
+            this.btnNumeral.UseVisualStyleBackColor = true;
+            this.btnNumeral.Click += new System.EventHandler(this.btnNumeral_Click);
             // 
             // btn0
             // 
@@ -199,16 +201,16 @@
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
-            // button1
+            // btnLlamar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(216, 79);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 37);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Llamar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnLlamar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLlamar.Location = new System.Drawing.Point(216, 79);
+            this.btnLlamar.Name = "btnLlamar";
+            this.btnLlamar.Size = new System.Drawing.Size(190, 37);
+            this.btnLlamar.TabIndex = 2;
+            this.btnLlamar.Text = "Llamar";
+            this.btnLlamar.UseVisualStyleBackColor = true;
+            this.btnLlamar.Click += new System.EventHandler(this.btnLlamar_Click);
             // 
             // cmbFranja
             // 
@@ -262,7 +264,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.cmbFranja);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLlamar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtNumOrigen);
             this.Name = "Form2";
@@ -279,7 +281,7 @@
 
         private System.Windows.Forms.TextBox txtNumOrigen;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button btnNumeral;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button btn9;
@@ -291,7 +293,7 @@
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLlamar;
         private System.Windows.Forms.ComboBox cmbFranja;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnSalir;

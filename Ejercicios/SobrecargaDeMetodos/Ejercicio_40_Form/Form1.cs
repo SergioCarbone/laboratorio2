@@ -13,29 +13,57 @@ namespace Ejercicio_40_Form
 {
     public partial class FrmMenu : Form
     {
-        Centralita centralita = new Centralita();        
+        Centralita centralita;        
 
         public FrmMenu()
         {
             InitializeComponent();
+            centralita = new Centralita();
         }
+        
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.ExitThread();
         }
 
-        private void FrmMenu_Load(object sender, EventArgs e)
-        {
-            
-        }
+      
 
         private void btnGenerarLlamada_Click(object sender, EventArgs e)
         {
             Form2 llamador = new Form2(centralita);            
             llamador.ShowDialog();
-            this.Hide();
+            //this.Hide();
 
+        }
+
+        private void btnFactTotal_Click(object sender, EventArgs e)
+        {
+            Form3 facturacionTotal = new Form3(centralita);
+            facturacionTotal.CalcularGanancia = Llamada.TipoLlamada.Todas;
+            facturacionTotal.ShowDialog();
+            //this.Hide();
+        }
+
+        private void FrmMenu_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFactLocal_Click(object sender, EventArgs e)
+        {
+            Form3 facturacionTotal = new Form3(centralita);
+            facturacionTotal.CalcularGanancia = Llamada.TipoLlamada.Local;
+            facturacionTotal.ShowDialog();
+            //this.Hide();
+        }
+
+        private void btnFacProvincial_Click(object sender, EventArgs e)
+        {
+            Form3 facturacionTotal = new Form3(centralita);
+            facturacionTotal.CalcularGanancia = Llamada.TipoLlamada.Provincial;
+            facturacionTotal.ShowDialog();
+            //this.Hide();
         }
     }
 }

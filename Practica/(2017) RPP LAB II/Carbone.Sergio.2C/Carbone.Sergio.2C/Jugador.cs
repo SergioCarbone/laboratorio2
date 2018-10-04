@@ -93,10 +93,18 @@ namespace Carbone.Sergio._2C
         }
 
 
-        //public override bool Equals(object obj)
-        //{
-        //    return base.GetType() == obj.GetType();
-        //}
+        public override bool Equals(object obj)
+        {
+            bool retorno = false;
+            if(obj is Jugador)
+            {
+                if(this == (Jugador)obj)
+                {
+                    retorno = true;
+                }
+            }
+            return retorno;
+        }
 
 
         public static explicit operator int(Jugador jugador)

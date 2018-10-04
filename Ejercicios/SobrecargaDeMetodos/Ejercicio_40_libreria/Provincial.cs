@@ -21,7 +21,13 @@ namespace Ejercicio_40_libreria
 
         #region Propiedades
 
-        public override float CostoLlamada { get { return this.CalcularCosto(); } }
+        public override float CostoLlamada
+        {
+            get
+            {
+                return this.CalcularCosto();
+            }
+        }
 
         #endregion
 

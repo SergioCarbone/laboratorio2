@@ -55,6 +55,7 @@
             this.btnFactTotal.TabIndex = 1;
             this.btnFactTotal.Text = "Facturacion Total";
             this.btnFactTotal.UseVisualStyleBackColor = true;
+            this.btnFactTotal.Click += new System.EventHandler(this.btnFactTotal_Click);
             // 
             // btnFactLocal
             // 
@@ -65,6 +66,7 @@
             this.btnFactLocal.TabIndex = 2;
             this.btnFactLocal.Text = "Facturacion Local";
             this.btnFactLocal.UseVisualStyleBackColor = true;
+            this.btnFactLocal.Click += new System.EventHandler(this.btnFactLocal_Click);
             // 
             // btnFacProvincial
             // 
@@ -75,6 +77,7 @@
             this.btnFacProvincial.TabIndex = 3;
             this.btnFacProvincial.Text = "Facturacion Provincial";
             this.btnFacProvincial.UseVisualStyleBackColor = true;
+            this.btnFacProvincial.Click += new System.EventHandler(this.btnFacProvincial_Click);
             // 
             // btnSalir
             // 
@@ -100,7 +103,7 @@
             this.Name = "FrmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Central Telefonica";
-            this.Load += new System.EventHandler(this.FrmMenu_Load);
+            this.Load += new System.EventHandler(this.FrmMenu_Load_1);
             this.ResumeLayout(false);
 
         }
