@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Ejercicio_43_Libreria;
+using Ejercicio_46_Libreria;
 
-namespace Ejercicio_43
+namespace Ejercicio_46
 {
     class Program
     {
@@ -28,7 +28,7 @@ namespace Ejercicio_43
                     Console.WriteLine("a1");
                 }
             }
-            catch(CompetenciaNoDisponibleException e)
+            catch (CompetenciaNoDisponibleException e)
             {
                 Console.WriteLine(e.Message);
             }
@@ -75,13 +75,12 @@ namespace Ejercicio_43
                 {
                     Console.WriteLine(a.InnerException.Message);
                     a = a.InnerException;
-                }                
+                }
             }
 
             Console.ReadKey();
             Console.Clear();
 
-            
 
         }
     }

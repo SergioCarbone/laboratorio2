@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejercicio_43_Libreria
+namespace Ejercicio_46_Libreria
 {
     public class Competencia
     {
@@ -13,9 +13,37 @@ namespace Ejercicio_43_Libreria
         private TipoCompetencia Tipo;
 
 
-        public short CantidadCompetidores { get { return this.cantidadCompetidores; } set { this.cantidadCompetidores = value; } }
+        public List<VehiculoDeCarrera> Competidores
+        {
+            get
+            {
+                return this.competidores;
+            }
+        }
 
-        public short CantidadVueltas { get { return this.cantidadVueltas; } set { this.cantidadVueltas = value; } }
+        public short CantidadCompetidores
+        {
+            get
+            {
+                return this.cantidadCompetidores;
+            }
+            set
+            {
+                this.cantidadCompetidores = value;
+            }
+        }
+
+        public short CantidadVueltas
+        {
+            get
+            {
+                return this.cantidadVueltas;
+            }
+            set
+            {
+                this.cantidadVueltas = value;
+            }
+        }
 
         public VehiculoDeCarrera this[int i]
         {

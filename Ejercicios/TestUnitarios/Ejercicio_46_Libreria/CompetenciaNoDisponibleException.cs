@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejercicio_43_Libreria
+namespace Ejercicio_46_Libreria
 {
     public class CompetenciaNoDisponibleException : Exception
     {

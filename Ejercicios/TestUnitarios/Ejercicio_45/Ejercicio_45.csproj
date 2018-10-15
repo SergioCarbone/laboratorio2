@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7B407A6C-21FF-4689-B3A4-5A954E22DF42}</ProjectGuid>
+    <ProjectGuid>{39D94611-C489-4939-AB30-BCB0FE3C6317}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ejercicio_44</RootNamespace>
-    <AssemblyName>Ejercicio_44</AssemblyName>
+    <RootNamespace>Ejercicio_45</RootNamespace>
+    <AssemblyName>Ejercicio_45</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,17 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Class2.cs" />
+    <Compile Include="Class3.cs" />
+    <Compile Include="Exception.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnaExcepcion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Ejercicio_44_Libreria\Ejercicio_44_Libreria.csproj">
-      <Project>{4d56d05b-1f88-43e3-99ba-5ed5bb8bf0c7}</Project>
-      <Name>Ejercicio_44_Libreria</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
