@@ -12,6 +12,7 @@ namespace Ejercicio_46_Test
         {
             Competencia a = new Competencia(5, 5, Competencia.TipoCompetencia.AutoF1);
             Assert.AreNotEqual(a.Competidores, null);
+           // Assert.AreEqual(a.Competidores, null);
         }
 
         [TestMethod]

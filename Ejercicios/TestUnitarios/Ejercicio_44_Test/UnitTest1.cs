@@ -11,7 +11,8 @@ namespace Ejercicio_44_Test
         public void TestInicializacionLista()
         {
             Centralita a = new Centralita("Sergio");
-            Assert.AreNotEqual(a, null);
+            Assert.AreNotEqual(a.Llamadas, null);
+            //Assert.AreEqual(a.Llamadas, null);
         }
 
         [TestMethod]
@@ -21,7 +22,7 @@ namespace Ejercicio_44_Test
             Centralita a = new Centralita("Sergio");
             Local l1 = new Local("Capital", 3, "Quilmes", 2.9f);
             Local l2 = new Local("Capital", 5, "Quilmes", 2.6f);
-
+            
             a += l1;
             try
             {
@@ -29,8 +30,9 @@ namespace Ejercicio_44_Test
             }
             catch(CentralitaException w)
             {
-                Console.Write(w.Message);
-            }           
+                Assert.IsInstanceOfType(w,typeof(CentralitaException) );
+            }     
+            
         }
 
         [TestMethod]
@@ -47,7 +49,7 @@ namespace Ejercicio_44_Test
             }
             catch(CentralitaException w)
             {
-                Console.WriteLine(w.Message);
+                Assert.IsInstanceOfType(w, typeof(CentralitaException));
             }
         }
 
@@ -59,14 +61,21 @@ namespace Ejercicio_44_Test
             Local l1 = new Local("Capital", 3, "Quilmes", 2.9f);
             Local l2 = new Local("Capital", 5, "Quilmes", 2.6f);
 
-            Assert.IsFalse(p1 == l1);
-            Assert.IsFalse(p1 == l2);
-            Assert.IsTrue(p1 == p2);
+            try
+            {
+                Assert.IsFalse(p1 == l1);
+                Assert.IsFalse(p1 == l2);
+                Assert.IsTrue(p1 == p2);
 
-            Assert.IsFalse(p2 == l1);
-            Assert.IsFalse(p2 == l2);
+                Assert.IsFalse(p2 == l1);
+                Assert.IsFalse(p2 == l2);
 
-            Assert.IsTrue(l1 == l2);
+                Assert.IsTrue(l1 == l2);
+            }
+            catch(CentralitaException a)
+            {
+                Assert.IsInstanceOfType(a, typeof(CentralitaException));
+            }            
         }
     }
 }
