@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Ejercicio_47_Libreria
 {
@@ -10,6 +11,43 @@ namespace Ejercicio_47_Libreria
     {
         public List<T> equipos;
         public string nombre;
+
+        public Torneo(string nombre)
+        {
+            this.nombre = nombre;
+            equipos = new List<T>();
+        }
+
+
+        public string JugarPartido
+        {
+            get
+            {
+                int cantidad = equipos.Count;
+                Random e1 = new Random();
+                int a, b;
+
+                a = e1.Next(0, cantidad);
+                Thread.Sleep(500);
+                Random e2 = new Random();
+                                   
+                b = e2.Next(0, cantidad);
+                               
+                return CalcularPartido(equipos[a], equipos[b]);
+            }
+        }
+
+
+        public string Mostrar()
+        {
+            StringBuilder datos = new StringBuilder();
+            datos.AppendFormat("Nombre: {0}", this.nombre);
+            foreach (Equipo aux in equipos)
+            {
+                datos.AppendFormat("\n{0}", aux.Ficha());
+            }            
+            return datos.ToString();
+        }
 
         public static bool operator ==(Torneo<T> a, string nombre)
         {
@@ -31,13 +69,10 @@ namespace Ejercicio_47_Libreria
         
 
         public static Torneo<T> operator +(Torneo<T> a, T e)
-        {            
-            foreach (Equipo aux in a.equipos)
+        {
+            if (!(a.equipos.Contains(e)))
             {
-                if(!(aux.nombre == e.nombre))
-                {
-                    a.equipos.Add(e);
-                }
+                a.equipos.Add(e);
             }
             return a;
         }
@@ -45,19 +80,15 @@ namespace Ejercicio_47_Libreria
         private string CalcularPartido(T t1, T t2)
         {
             Random resultado1 = new Random();
-            Random resultado2 = new Random();
             string retorno = "";
+            int r1, r2;
+            r1 = resultado1.Next(0, 10);
+            Thread.Sleep(2000);
+            Random resultado2 = new Random();
+            r2 = resultado2.Next(0, 10);
 
-            if((t1 is EquipoFutbol) && (t2 is EquipoFutbol))
-            {
-                retorno = string.Format("{0} {1} - {2} {3}", t1.nombre, resultado1.Next(0, 10),
-                    t2.nombre, resultado2.Next(0, 10));
-            }
-            else
-            {
-                retorno = string.Format("{0} {1} - {2} {3}", t1.nombre, resultado1.Next(0, 100),
-                    t2.nombre, resultado2.Next(0, 100));
-            }
+            retorno = string.Format("\n{0} {1} - {2} {3}", t1.nombre, r1, t2.nombre, r2);
+
 
             return retorno;
         }

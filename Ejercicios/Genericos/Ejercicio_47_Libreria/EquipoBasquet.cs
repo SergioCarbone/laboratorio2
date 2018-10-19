@@ -8,6 +8,10 @@ namespace Ejercicio_47_Libreria
 {
     public class EquipoBasquet : Equipo
     {
+        public EquipoBasquet(string nombre, DateTime fecha)
+            :base(nombre,fecha)
+        {
 
+        }
     }
 }

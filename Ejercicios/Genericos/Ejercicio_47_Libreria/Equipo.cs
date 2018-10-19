@@ -11,6 +11,13 @@ namespace Ejercicio_47_Libreria
         public string nombre;
         public DateTime fechaCreacion;
 
+        public Equipo(string nombre, DateTime fecha)
+        {
+            this.nombre = nombre;
+            this.fechaCreacion = fecha;
+        }
+
+
         public static bool operator ==(Equipo a, Equipo b)
         {
             bool retorno = false;
