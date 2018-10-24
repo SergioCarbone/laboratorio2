@@ -56,12 +56,20 @@ namespace Ejercicio_52_Libreria
         }
 
 
-        bool IAcciones.Recargar(int unidades)
+        public bool Recargar(int unidades)
         {
             this.tinta += unidades;
             return true;
         }
 
+
+        public override string ToString()
+        {
+            StringBuilder dato = new StringBuilder();
+            dato.AppendFormat("Color de tinta: {0}", this.colorTinta);
+            dato.AppendFormat("\nTinta: {0}", this.tinta);
+            return dato.ToString();
+        }
         #endregion
     }
 }

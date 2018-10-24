@@ -49,9 +49,9 @@ namespace Ejercicio_53_Libreria
         public EscrituraWrapper Escribir(string texto)
         {
             EscrituraWrapper retorno = new EscrituraWrapper(texto, this.Color);
-            int tamaño = texto.Length;
-            double aux = 1;
-            this.tinta = this.tinta - (tamaño * (float)aux);
+            double tamaño = this.tinta;
+            double aux = 0.3;
+            this.tinta = this.tinta - ((float)tamaño * (float)aux);
             return retorno;
         }
 
@@ -60,6 +60,14 @@ namespace Ejercicio_53_Libreria
         {
             this.tinta += unidades;
             return true;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder dato = new StringBuilder();
+            dato.AppendFormat("Color de tinta: {0}", this.colorTinta);
+            dato.AppendFormat("\nTinta: {0}", this.tinta);
+            return dato.ToString();
         }
 
         #endregion
