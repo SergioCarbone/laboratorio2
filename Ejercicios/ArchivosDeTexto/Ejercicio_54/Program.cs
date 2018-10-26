@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ejercicio_54_IO;
 
 namespace Ejercicio_54
 {
@@ -10,25 +11,34 @@ namespace Ejercicio_54
     {
         static void Main(string[] args)
         {
+            string fecha; //= DateTime.Now.Year.ToString();
+            //fecha += DateTime.Now.Month.ToString();
+            //fecha += DateTime.Now.Day.ToString();
+            //fecha += "-";
+            //fecha += DateTime.Now.Hour.ToString();
+            //fecha += DateTime.Now.Minute.ToString();
+            fecha = DateTime.Now.ToString("yyyyMMdd-HHmm");
             try
             {
                 Class3.MiClase3();
             }
             catch (DivideByZeroException a)
             {
-                Console.WriteLine(a.Message);
+                ArchivoTexto.Guardar(fecha, a.Message.ToString());
             }
             catch (MiException e)
             {
                 Exception a = e;
-                Console.WriteLine(e.Message);
+                ArchivoTexto.Guardar(fecha, a.Message.ToString());
                 while (a.InnerException != null)
                 {
-                    Console.WriteLine(a.InnerException.Message);
+                    ArchivoTexto.Guardar(fecha, a.Message.ToString());
                     a = a.InnerException;
                 }
             }
-            Console.ReadKey()
+
+            Console.WriteLine(ArchivoTexto.Leer(fecha));
+            Console.ReadKey();
         }
     }
 }

@@ -4,15 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{916103D3-68C2-424A-9310-D4DA6911CF93}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Ejercicio_54</RootNamespace>
-    <AssemblyName>Ejercicio_54</AssemblyName>
+    <ProjectGuid>{EAC2B7C9-7F00-4DF2-A678-8E5262A77CCB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ejercicio_55_Libreria</RootNamespace>
+    <AssemblyName>Ejercicio_55_Libreria</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,22 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Centralita.cs" />
+    <Compile Include="CentralitaException.cs" />
     <Compile Include="Class1.cs" />
-    <Compile Include="Class2.cs" />
-    <Compile Include="Class3.cs" />
-    <Compile Include="Exception.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="FallaLogException.cs" />
+    <Compile Include="IGuardar.cs" />
+    <Compile Include="Llamada.cs" />
+    <Compile Include="Local.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnaExcepcion.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Ejercicio_54_IO\Ejercicio_54_IO.csproj">
-      <Project>{ee0caf58-6a6a-4eb6-9aae-dde35145f2e4}</Project>
-      <Name>Ejercicio_54_IO</Name>
-    </ProjectReference>
+    <Compile Include="Provincial.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
