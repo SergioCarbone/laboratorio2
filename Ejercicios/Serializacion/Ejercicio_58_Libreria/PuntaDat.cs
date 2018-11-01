@@ -29,7 +29,7 @@ namespace Ejercicio_58_Libreria
         }
 
 
-        public PuntaDat Leer(string ruta)
+        public string Leer(string ruta)
         {
             fs = new FileStream(ruta, FileMode.Open);
             bf = new BinaryFormatter();
@@ -37,13 +37,13 @@ namespace Ejercicio_58_Libreria
         }
 
 
-        public bool Guardar(string ruta,PuntaDat obj)
+        public bool Guardar(string ruta)
         {
             if (ValidarArchivo(ruta))
             {
                 fs = new FileStream(ruta, FileMode.Create);
                 bf = new BinaryFormatter();
-                bf.Serialize(fs, obj);
+                bf.Serialize(fs, contenido);
                 retorno = true;
             }
             return retorno;
@@ -54,8 +54,7 @@ namespace Ejercicio_58_Libreria
             bool retorno = false;
             try
             {
-                if (File.Exists(ruta))
-                {
+                
                     if (ruta.Contains(".dat"))
                     {
                         retorno = true;
@@ -64,7 +63,7 @@ namespace Ejercicio_58_Libreria
                     {
                         throw new ArchivoIncorrectoException("El archivo no es un dat.");
                     }
-                }
+                
             }
             catch(FileNotFoundException e)
             {

@@ -11,14 +11,29 @@ namespace Ejercicio_58_Libreria
     public class PuntoTxt : Archivo, IArchivos<string>
     {        
         bool retorno = false;
+        private string contenido;
 
-        public bool Guardar(string ruta, string obj)
+
+        public string Contenido
+        {
+            get
+            {
+                return this.contenido;
+            }
+            set
+            {
+                this.contenido = value;
+            }
+        }
+
+
+        public bool Guardar(string ruta)
         {            
             if(ValidarArchivo(ruta))
             {
                 StreamWriter sw;
                 sw = new StreamWriter(ruta, true);
-                sw.Write(obj);
+                sw.Write(contenido);
                 sw.Close();
                 retorno = true;                
             }
@@ -39,8 +54,7 @@ namespace Ejercicio_58_Libreria
             bool retorno = false;
             try
             {
-                //if (File.Exists(ruta))
-                //{
+              
                     if (ruta.Contains(".txt"))
                     {
                         retorno = true;
@@ -49,7 +63,7 @@ namespace Ejercicio_58_Libreria
                     {
                         throw new ArchivoIncorrectoException("El archivo no es un txt.");
                     }
-               // }
+                
             }
             catch(FileNotFoundException e)
             {

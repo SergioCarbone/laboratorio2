@@ -8,7 +8,7 @@ namespace Ejercicio_58_Libreria
 {
     public interface IArchivos<T>
     {
-        bool Guardar(string ruta, T obj);
+        bool Guardar(string ruta);
         T Leer(string ruta);
     }
 }

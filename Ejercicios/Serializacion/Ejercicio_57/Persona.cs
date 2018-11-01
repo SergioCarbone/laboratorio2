@@ -26,6 +26,30 @@ namespace Ejercicio_57
             this.apellido = apellido;
         }
 
+        public string Nombre
+        {
+            get
+            {
+                return this.nombre;
+            }
+            set
+            {
+                this.nombre = value;
+            }
+        }
+
+        public string Apellido
+        {
+            get
+            {
+                return this.apellido;
+            }
+            set
+            {
+                this.apellido = value;
+            }
+        }
+
         //public static bool Guardar(Persona p)
         //{
         //    bool retorno = false;

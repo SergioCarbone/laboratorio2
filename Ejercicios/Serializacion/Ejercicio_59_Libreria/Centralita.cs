@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
-
+using System.IO;
 namespace Ejercicio_59_Libreria
 {
      public class Centralita : IGuardar<string>
@@ -124,7 +124,7 @@ namespace Ejercicio_59_Libreria
             }
             catch(NotImplementedException e)
             {
-                throw new FallaLogException("No se pudo guardar", "Centralita", "operador +");
+                throw new FallaLogException("No se pudo guardar", "Centralita", "operador +",e);
             }
             finally
             {
@@ -148,7 +148,7 @@ namespace Ejercicio_59_Libreria
             }
             catch(Exception e)
             {
-                throw new FallaLogException("No se pudo leer", "Centralita", "operador +");
+                throw new FallaLogException("No se pudo leer", "Centralita", "operador +",e);
             }
             finally
             {
