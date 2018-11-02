@@ -20,7 +20,7 @@ namespace Ejercicio_59
             Provincial l2 = new Provincial("Morón", Provincial.Franja.Franja_1, 21, "Bernal");
             Local l3 = new Local("Lanús", 45, "San Rafael", 1.99f);
             Provincial l4 = new Provincial(Provincial.Franja.Franja_3, l2);
-
+            Local sergio = new Local();
             // Las llamadas se irán registrando en la Centralita.             
             c.RutaDeArchivo = "Log de llamadas";
             try
@@ -34,14 +34,10 @@ namespace Ejercicio_59
             {
                 Console.WriteLine(e.Message);
             }
-
-            
-
-
             // c.OrdenarLlamadas();
-
-
-            Console.WriteLine(c.Leer());
+            l1.Guardar();
+            Console.ReadKey();
+            Console.WriteLine(l1.Leer());
             Console.ReadKey();
         }
     }

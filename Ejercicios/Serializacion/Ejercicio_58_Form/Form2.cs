@@ -34,8 +34,8 @@ namespace Ejercicio_58_Form
                 
                 dat = new PuntaDat();
                 dat.Leer(ruta);
-                richTextBox1.Text = dato.ReadToEnd()    ;
-                dato.Close();
+                //richTextBox1.Text = dato.ReadToEnd()    ;
+                //dato.Close();
             }
         }
 

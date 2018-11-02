@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace Ejercicio_59_Libreria
 {
     public class Local : Llamada, IGuardar<string>
     {
         protected float costo;
-
+        protected string ruta;
         #region Propiedades
 
         public override float CostoLlamada
@@ -18,6 +20,10 @@ namespace Ejercicio_59_Libreria
             {
                 return CalcularCosto();
             }
+            set
+            {
+                this.costo = value;
+            }
         }
 
 
@@ -25,41 +31,71 @@ namespace Ejercicio_59_Libreria
         {
             get
             {
-                throw new NotImplementedException();
+                return this.ruta;
             }
             set
             {
-                throw new NotImplementedException();
+                this.ruta = value;
             }
         }
         #endregion
 
         #region Metodos
+        public Local()
+        {
+
+        }
 
         public Local(Llamada llamada, float costo)
             : this(llamada.NroOrigen, llamada.Duracion, llamada.NroDestino, costo)
         {
-
+            
         }
 
         public Local(string origen, float duracion, string destino, float costo)
             : base(duracion, destino, origen)
         {
             this.costo = costo;
+            this.RutaDeArchivo = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         }
 
 
         public bool Guardar()
         {
-            bool retorno = false;                       
-
+            bool retorno = false;
+            string ruta = RutaDeArchivo + "/" + "prueba.xml";
+            
+            try
+            {
+                XmlTextWriter writer = new XmlTextWriter(ruta, Encoding.UTF8);
+                XmlSerializer ser = new XmlSerializer(typeof(Local));
+                ser.Serialize(writer, this);
+                writer.Close();
+            }
+            catch(InvalidCastException w)
+            {
+                throw new InvalidCastException(w.Message);
+            }
             return retorno;
         }
 
 
         public string Leer()
         {
-            throw new NotImplementedException();
+            Local aux = new Local();
+            string ruta = RutaDeArchivo + "/" + "prueba.xml";
+            try
+            {
+                XmlTextReader reader = new XmlTextReader(ruta);
+                XmlSerializer ser = new XmlSerializer(typeof(Local));
+                aux = (Local)ser.Deserialize(reader);
+                reader.Close();
+            }
+            catch(InvalidCastException w)
+            {
+                throw new InvalidCastException(w.Message);
+            }
+            return aux.ToString();
         }
 
 

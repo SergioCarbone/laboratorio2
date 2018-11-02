@@ -3,22 +3,65 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Ejercicio_59_Libreria
 {
+    [XmlInclude(typeof(Local))]
+    [XmlInclude(typeof(Provincial))]
     public abstract class Llamada
     {
         protected float duracion;
         protected string nroDestino, nroOrigen;
 
         #region Propiedades        
-        public abstract float CostoLlamada { get; }
-        public float Duracion { get { return this.duracion; } }
-        public string NroOrigen { get { return this.nroOrigen; } }
-        public string NroDestino { get { return this.nroDestino; } }
+        public abstract float CostoLlamada
+        {
+            get;
+            set;
+        }
+        public float Duracion
+        {
+            get
+            {
+                return this.duracion;
+            }
+            set
+            {
+                this.duracion = value;
+            }
+        }
+        public string NroOrigen
+        {
+            get
+            {
+                return this.nroOrigen;
+            }
+            set
+            {
+                this.nroOrigen = value;
+            }
+        }
+
+        public string NroDestino
+        {
+            get
+            {
+                return this.nroDestino;
+            }
+            set
+            {
+                this.nroDestino = value;
+            }
+        }
         #endregion
 
         #region Metodos
+        public Llamada()
+        {
+
+        }
+
         public Llamada(float duracion, string nroDestino, string nroOrigen)
         {
             this.duracion = duracion;

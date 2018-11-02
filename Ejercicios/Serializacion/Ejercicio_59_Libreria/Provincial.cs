@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace Ejercicio_59_Libreria
 {
@@ -27,6 +29,11 @@ namespace Ejercicio_59_Libreria
             {
                 return this.CalcularCosto();
             }
+            set
+            {
+                this.CalcularCosto();
+            }
+         
         }
 
         public string RutaDeArchivo
@@ -45,6 +52,11 @@ namespace Ejercicio_59_Libreria
 
         #region Metodos
 
+        public Provincial()
+        {
+
+        }
+
         public Provincial(Franja franjaHoraria, Llamada llamada)
             : this(llamada.NroOrigen, franjaHoraria, llamada.Duracion, llamada.NroDestino)
         {
@@ -58,8 +70,19 @@ namespace Ejercicio_59_Libreria
         }
 
         public bool Guardar()
-        {            
-            throw new NotImplementedException();
+        {
+            XmlTextWriter writer;
+            XmlSerializer ser;
+            string ruta = RutaDeArchivo + "/" + "prueba.xml";
+            try
+            {
+                writer = new XmlTextWriter(ruta, Encoding.UTF8);
+                
+            }
+            catch(InvalidCastException e)
+            {
+                throw new InvalidCastException(e.Message);
+            }
         }
 
         public string Leer()
