@@ -36,8 +36,17 @@ namespace Ejercicio_59
             }
             // c.OrdenarLlamadas();
             l1.Guardar();
+            l2.Guardar();
+            c.Guardar();
             Console.ReadKey();
             Console.WriteLine(l1.Leer());
+            Console.ReadKey();
+            Console.WriteLine(l2.Leer());
+            Console.ReadKey();
+            Console.WriteLine(c.Leer());
+
+
+
             Console.ReadKey();
         }
     }

@@ -9,7 +9,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace Ejercicio_58_Libreria
 {
     [Serializable]
-    public class PuntaDat : Archivo, IArchivos<PuntaDat>
+    public class PuntoDat : Archivo, IArchivos<PuntoDat>
     {
         FileStream fs;
         BinaryFormatter bf;
@@ -28,25 +28,42 @@ namespace Ejercicio_58_Libreria
             }
         }
 
-
-        public string Leer(string ruta)
+        public PuntoDat()
         {
+
+        }
+
+        public PuntoDat Leer(string ruta)
+        {
+            PuntoDat aux = new PuntoDat();
             fs = new FileStream(ruta, FileMode.Open);
             bf = new BinaryFormatter();
-            return (PuntaDat)bf.Deserialize(fs);
+            aux.Contenido = (string)bf.Deserialize(fs);
+            fs.Close();
+            return aux;
         }
 
 
-        public bool Guardar(string ruta)
+        public bool Guardar(string ruta, PuntoDat objeto)
         {
             if (ValidarArchivo(ruta))
             {
-                fs = new FileStream(ruta, FileMode.Create);
+                fs = new FileStream(ruta, FileMode.Append);
                 bf = new BinaryFormatter();
-                bf.Serialize(fs, contenido);
+                bf.Serialize(fs, objeto.Contenido);
+                fs.Close();
                 retorno = true;
             }
             return retorno;
+        }
+
+        public bool GuardarComo(string ruta, PuntoDat objeto)
+        {
+            fs = new FileStream(ruta, FileMode.Create);
+            bf = new BinaryFormatter();
+            bf.Serialize(fs, objeto.Contenido);
+            fs.Close();
+            return true;
         }
 
         protected override bool ValidarArchivo(string ruta)
@@ -54,7 +71,8 @@ namespace Ejercicio_58_Libreria
             bool retorno = false;
             try
             {
-                
+                if(File.Exists(ruta))
+                {
                     if (ruta.Contains(".dat"))
                     {
                         retorno = true;
@@ -63,7 +81,7 @@ namespace Ejercicio_58_Libreria
                     {
                         throw new ArchivoIncorrectoException("El archivo no es un dat.");
                     }
-                
+                }                                   
             }
             catch(FileNotFoundException e)
             {

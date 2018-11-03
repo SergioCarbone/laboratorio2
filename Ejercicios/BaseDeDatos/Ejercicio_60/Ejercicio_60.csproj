@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BACEA748-05AE-497E-AC10-6721B64AF78E}</ProjectGuid>
+    <ProjectGuid>{F48F3202-B1CB-4106-8C8A-E762D537CFBC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Ejercicio_58_Form</RootNamespace>
-    <AssemblyName>Ejercicio_58_Form</AssemblyName>
+    <RootNamespace>Ejercicio_60</RootNamespace>
+    <AssemblyName>Ejercicio_60</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -78,9 +78,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ejercicio_58_Libreria\Ejercicio_58_Libreria.csproj">
-      <Project>{29e9b273-3cae-4ca4-acd7-807f24d94707}</Project>
-      <Name>Ejercicio_58_Libreria</Name>
+    <ProjectReference Include="..\Ejercicio_60_Libreria\Ejercicio_60_Libreria.csproj">
+      <Project>{df0b58b8-c012-4b8b-84b8-e27115b52ee0}</Project>
+      <Name>Ejercicio_60_Libreria</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

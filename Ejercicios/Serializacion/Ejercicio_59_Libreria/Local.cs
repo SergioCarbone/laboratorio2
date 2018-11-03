@@ -63,7 +63,7 @@ namespace Ejercicio_59_Libreria
         public bool Guardar()
         {
             bool retorno = false;
-            string ruta = RutaDeArchivo + "/" + "prueba.xml";
+            string ruta = RutaDeArchivo + "/" + "pruebaLocal.xml";
             
             try
             {
@@ -83,7 +83,7 @@ namespace Ejercicio_59_Libreria
         public string Leer()
         {
             Local aux = new Local();
-            string ruta = RutaDeArchivo + "/" + "prueba.xml";
+            string ruta = RutaDeArchivo + "/" + "pruebaLocal.xml";
             try
             {
                 XmlTextReader reader = new XmlTextReader(ruta);

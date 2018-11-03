@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 
 namespace Ejercicio_59_Libreria
 {
-    public class Provincial : Llamada, IGuardar<string>
+    public class Provincial : Llamada//, IGuardar<string>
     {
         #region Enumerado
         public enum Franja
@@ -20,6 +20,7 @@ namespace Ejercicio_59_Libreria
         #endregion
 
         protected Franja franjaHoraria;
+        protected string ruta;
 
         #region Propiedades
 
@@ -40,11 +41,11 @@ namespace Ejercicio_59_Libreria
         {
             get
             {
-                throw new NotImplementedException();
+                return this.ruta;
             }
             set
             {
-                throw new NotImplementedException();
+                this.ruta = value;
             }
         }
 
@@ -67,27 +68,46 @@ namespace Ejercicio_59_Libreria
             : base(duracion, destino, origen)
         {
             this.franjaHoraria = franjaHoraria;
+            this.RutaDeArchivo = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         }
 
         public bool Guardar()
         {
+            bool retorno = false;
             XmlTextWriter writer;
             XmlSerializer ser;
-            string ruta = RutaDeArchivo + "/" + "prueba.xml";
+            string ruta = RutaDeArchivo + "/" + "pruebaProvincial.xml";
             try
             {
                 writer = new XmlTextWriter(ruta, Encoding.UTF8);
-                
+                ser = new XmlSerializer(typeof(Provincial));
+                ser.Serialize(writer, this);
+                writer.Close();
+                retorno = true;
             }
-            catch(InvalidCastException e)
+            catch (InvalidCastException e)
             {
                 throw new InvalidCastException(e.Message);
             }
+            return retorno;
         }
 
         public string Leer()
         {
-            throw new NotImplementedException();
+            Provincial p = new Provincial();                      
+            string ruta = RutaDeArchivo + "/" + "pruebaProvincial.xml";
+            try
+            {
+                XmlTextReader reader = new XmlTextReader(ruta);
+                XmlSerializer ser = new XmlSerializer(typeof(Provincial));
+                p = (Provincial)ser.Deserialize(reader);
+                reader.Close();
+            }
+            catch(InvalidCastException w)
+            {
+                throw new InvalidCastException(w.Message);
+            }
+            return p.ToString();
         }
 
 

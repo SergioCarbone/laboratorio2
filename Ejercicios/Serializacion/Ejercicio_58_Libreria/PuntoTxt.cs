@@ -10,30 +10,16 @@ namespace Ejercicio_58_Libreria
 {    
     public class PuntoTxt : Archivo, IArchivos<string>
     {        
-        bool retorno = false;
-        private string contenido;
+        bool retorno = false;                
 
 
-        public string Contenido
-        {
-            get
-            {
-                return this.contenido;
-            }
-            set
-            {
-                this.contenido = value;
-            }
-        }
-
-
-        public bool Guardar(string ruta)
+        public bool Guardar(string ruta,string objeto)
         {            
             if(ValidarArchivo(ruta))
             {
                 StreamWriter sw;
                 sw = new StreamWriter(ruta, true);
-                sw.Write(contenido);
+                sw.Write(objeto);
                 sw.Close();
                 retorno = true;                
             }
@@ -46,7 +32,16 @@ namespace Ejercicio_58_Libreria
             string retorno = "";
             StreamReader rw = new StreamReader(ruta);
             retorno = rw.ReadToEnd();
+            rw.Close();
             return retorno;
+        }
+
+        public bool GuardarComo(string ruta, string objeto)
+        {
+            StreamWriter writer = new StreamWriter(ruta);
+            writer.WriteLine(objeto);
+            writer.Close();
+            return true;
         }
 
         protected override bool ValidarArchivo(string ruta)
@@ -54,7 +49,8 @@ namespace Ejercicio_58_Libreria
             bool retorno = false;
             try
             {
-              
+                if(File.Exists(ruta))
+                {
                     if (ruta.Contains(".txt"))
                     {
                         retorno = true;
@@ -63,7 +59,7 @@ namespace Ejercicio_58_Libreria
                     {
                         throw new ArchivoIncorrectoException("El archivo no es un txt.");
                     }
-                
+                }                                    
             }
             catch(FileNotFoundException e)
             {
