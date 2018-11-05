@@ -13,7 +13,7 @@ namespace Ejercicio_60
 {
     public partial class Form1 : Form
     {
-        Class1 c;
+        Class1 c;        
         public Form1()
         {
             InitializeComponent();
@@ -21,14 +21,19 @@ namespace Ejercicio_60
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
-        {
+        {            
             try
             {
-                richTextBox1.Text = string.Format("\n{0}",c.Mostrar());
+                c.Mostrar();                
+                foreach (Producto p in c.lista)
+                {
+                    richTextBox1.Text += string.Format("\n Id: {0} Name: {1} ProductNumber: {0}",p.Id , p.Name, p.ProductNumber);
+                }
+                
             }
             catch(Exception w)
             {
-                MessageBox.Show("Se conecto",w.Message);
+                MessageBox.Show("Error, no se conecto",w.Message);
             }
             
         }

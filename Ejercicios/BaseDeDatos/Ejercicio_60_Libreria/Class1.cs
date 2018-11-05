@@ -14,6 +14,7 @@ namespace Ejercicio_60_Libreria
         SqlConnection conexion;
         SqlCommand comando;
         SqlDataReader dataReader;
+        public List<Producto> lista;
 
         public Class1()
         {            
@@ -30,10 +31,16 @@ namespace Ejercicio_60_Libreria
         }
 
 
-        public string Mostrar()
+        public void Mostrar()
         {
-            string aux = "";            
-            comando = new SqlCommand("SELECT Name FROM AdventureWorks2012.Production.Product", conexion);
+            Producto p = null;
+            string ProductID;
+            string Name;
+            string ProductNumber;
+            lista = new List<Producto>();
+
+            //string dato = "SELECT Name FROM AdventureWorks2012.Production.Product"
+            comando = new SqlCommand("SELECT * FROM AdventureWorks2012.Production.Product", conexion);
             //comando.CommandText = "SELECT nombre FROM Production.Product";
             //comando.CommandType = System.Data.CommandType.Text;
             //comando.Connection = conexion;
@@ -43,11 +50,18 @@ namespace Ejercicio_60_Libreria
 
             while (dataReader.Read())
             {
-                //aux += dataReader["ProductID"].ToString();
-                aux += dataReader["Name"].ToString();                
+                ProductID = dataReader["ProductID"].ToString();
+                //aux += "\t";
+                Name = dataReader["Name"].ToString();
+                //aux += "\t";
+                ProductNumber = dataReader["ProductNumber"].ToString();
+                //aux += "\t";
+                //aux += "\n";      
+                p = new Producto(Convert.ToInt32(ProductID), Name, ProductNumber);
+                lista.Add(p);
             }
-            dataReader.Close();
-            return aux;
+            
+            dataReader.Close();            
         }
 
         
