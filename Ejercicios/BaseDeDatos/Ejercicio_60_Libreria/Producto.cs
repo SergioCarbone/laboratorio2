@@ -60,6 +60,15 @@ namespace Ejercicio_60_Libreria
             this.ProductNumber = productNumber;
         }
 
+        public override string ToString()
+        {
+            return this.Mostrar();
+        }
+
+        protected string Mostrar()
+        {
+            return string.Format("\n Id: {0} Name: {1} ProductNumber: {2}", this.Id, this.Name, this.ProductNumber);
+        }
 
     }
 }

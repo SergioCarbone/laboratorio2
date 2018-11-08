@@ -9,20 +9,20 @@ using System.Data.Sql;
 
 namespace Ejercicio_60_Libreria
 {
-    public class Class1
+    public class SqlPrueba
     {
         SqlConnection conexion;
         SqlCommand comando;
         SqlDataReader dataReader;
         public List<Producto> lista;
 
-        public Class1()
-        {            
+        public SqlPrueba()
+        {                      
             try
             {
                 string conectionStr = "Data Source=.\\SQLEXPRESS;Initial Catalog=AdventureWorks2012;Integrated Security=True";
                 conexion = new SqlConnection(conectionStr);
-                conexion.Open();                                             
+                //conexion.Open();
             }
             catch(Exception e)
             {
@@ -37,33 +37,44 @@ namespace Ejercicio_60_Libreria
             string ProductID;
             string Name;
             string ProductNumber;
-            lista = new List<Producto>();
-
-            //string dato = "SELECT Name FROM AdventureWorks2012.Production.Product"
-            comando = new SqlCommand("SELECT * FROM AdventureWorks2012.Production.Product", conexion);
-            //comando.CommandText = "SELECT nombre FROM Production.Product";
-            //comando.CommandType = System.Data.CommandType.Text;
-            //comando.Connection = conexion;
-
-            
+            lista = new List<Producto>();                       
+            comando = new SqlCommand("SELECT * FROM Production.Product", conexion);
+            conexion.Open();
             dataReader = comando.ExecuteReader();
 
             while (dataReader.Read())
             {
-                ProductID = dataReader["ProductID"].ToString();
-                //aux += "\t";
-                Name = dataReader["Name"].ToString();
-                //aux += "\t";
+                ProductID = dataReader["ProductID"].ToString();                
+                Name = dataReader["Name"].ToString();                
                 ProductNumber = dataReader["ProductNumber"].ToString();
-                //aux += "\t";
-                //aux += "\n";      
                 p = new Producto(Convert.ToInt32(ProductID), Name, ProductNumber);
                 lista.Add(p);
-            }
-            
-            dataReader.Close();            
+            }            
+            dataReader.Close();
+            conexion.Close();
         }
 
-        
+
+        public void Modificar(Producto p)
+        {
+            string query = string.Format("UPDATE Production.Product SET Name = '{0}', ProductNumber = '{1}' WHERE ProductID = {2}", p.Name, p.ProductNumber, p.Id);
+            Operar(query);
+        }
+
+
+        public void Insertar(Producto p)
+        {
+            string query = string.Format("INSERT INTO Sergio (Nombre,Apellido) VALUES ('{0}','{1}')", p.Name, p.ProductNumber);
+            Operar(query);
+        }
+
+
+        private void Operar(string query)
+        {
+            comando = new SqlCommand(query, conexion);
+            conexion.Open();
+            comando.ExecuteNonQuery();
+            conexion.Close();
+        }
     }
 }
