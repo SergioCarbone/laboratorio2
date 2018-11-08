@@ -65,9 +65,7 @@ namespace Ejercicio_52_Libreria
 
         public override string ToString()
         {
-            StringBuilder dato = new StringBuilder();            
-            dato.AppendFormat("Tamaño de mina: {0}", this.tamanioMina);
-            return dato.ToString();
+            return base.ToString();
         }
         #endregion
     }

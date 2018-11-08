@@ -44,9 +44,9 @@ namespace Ejercicio_53_Libreria
         public EscrituraWrapper Escribir(string texto)
         {
             EscrituraWrapper retorno = new EscrituraWrapper(texto, this.Color);
-            double aux = 0.1;
-            float tamaño = this.tamanioMina;
-            this.tamanioMina = (this.tamanioMina - (tamaño * (float)aux));
+            double aux = 1;
+            int tamaño = texto.Length;
+            this.tamanioMina = this.tamanioMina - (tamaño * (float)aux);
             return retorno;
         }
 
@@ -67,9 +67,7 @@ namespace Ejercicio_53_Libreria
 
         public override string ToString()
         {
-            StringBuilder dato = new StringBuilder();
-            dato.AppendFormat("Tamaño de mina: {0}", this.tamanioMina);
-            return dato.ToString();
+            return base.ToString();
         }
         #endregion
     }
