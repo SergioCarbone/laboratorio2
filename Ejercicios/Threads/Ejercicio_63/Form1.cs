@@ -30,8 +30,9 @@ namespace Ejercicio_63
 
         private void MostrarHora(object o)
         {
+            
             while(true)
-            {
+            {                
                 o = DateTime.Now.ToLocalTime();
                 if (this.label1.InvokeRequired)
                 {
