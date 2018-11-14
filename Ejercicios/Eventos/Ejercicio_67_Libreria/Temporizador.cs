@@ -7,10 +7,12 @@ using System.Threading;
 
 namespace Ejercicio_67
 {
-    sealed class Temporizador
+    public delegate void encargadoTiempo();
+    public class Temporizador
     {
         private Thread hilo;
         private int intervalo;
+        public event encargadoTiempo EventoTiempo;
 
         public bool Activo
         {
@@ -20,13 +22,13 @@ namespace Ejercicio_67
             }
             set
             {
-                if(this.hilo.IsAlive == false || hilo != null)
+                hilo = new Thread(Corriendo);
+                if (value == false && hilo != null && this.hilo.IsAlive == true)
                 {
                     this.hilo.Abort();
                 }
-                else
-                {
-                    hilo = new Thread(Corriendo);
+                else if (value == true && this.hilo.IsAlive == false && hilo != null)
+                {                   
                     hilo.Start();
                 }
             }
@@ -38,11 +40,19 @@ namespace Ejercicio_67
             {
                 return this.intervalo;
             }
+            set
+            {
+                this.intervalo = value;
+            }
         }
 
         private void Corriendo()
         {
-
+            do
+            {                
+                Thread.Sleep(this.intervalo);
+                this.EventoTiempo();
+            } while (this.Activo == true);
         }
     }
 }

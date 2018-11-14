@@ -78,6 +78,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\BaseDeDatos\Ejercicio_62_Libreria\Ejercicio_62_Libreria.csproj">
+      <Project>{ed312cad-06ac-4c35-b5ba-d73c70610867}</Project>
+      <Name>Ejercicio_62_Libreria</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Ejercicio_58_Libreria\Ejercicio_58_Libreria.csproj">
       <Project>{29e9b273-3cae-4ca4-acd7-807f24d94707}</Project>
       <Name>Ejercicio_58_Libreria</Name>
