@@ -44,5 +44,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Temporizador.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Threads\Ejercicio_63\Ejercicio_63.csproj">
+      <Project>{11a70b76-e265-4cee-93a9-72a8dddb48a7}</Project>
+      <Name>Ejercicio_63</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

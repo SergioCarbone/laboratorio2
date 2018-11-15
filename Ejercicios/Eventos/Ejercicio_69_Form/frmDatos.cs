@@ -12,16 +12,17 @@ namespace Ejercicio_69_Form
 {
     public partial class frmDatos : Form
     {
-        FrmTestDelegados d;
-        public frmDatos()
+       // FrmTestDelegados d;
+        public frmDatos()//FrmTestDelegados forma)
         {
             InitializeComponent();
+           // d = forma;
         }
 
         private void frmDatos_Load(object sender, EventArgs e)
         {
-            d = new FrmTestDelegados();
-            d.EventoNombre += ActualizarNombre;                      
+          
+           // d.EventoNombre += ActualizarNombre;                      
         }
 
         public void ActualizarNombre(string nombre)

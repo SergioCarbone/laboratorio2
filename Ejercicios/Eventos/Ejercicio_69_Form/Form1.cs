@@ -35,6 +35,7 @@ namespace Ejercicio_69_Form
         private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             datos = new frmDatos();
+            forma.EventoNombre += datos.ActualizarNombre;
             datos.Owner = this;
             datos.Show();
         }

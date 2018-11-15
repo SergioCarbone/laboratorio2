@@ -59,14 +59,14 @@
             // testDelegadoToolStripMenuItem
             // 
             this.testDelegadoToolStripMenuItem.Name = "testDelegadoToolStripMenuItem";
-            this.testDelegadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.testDelegadoToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.testDelegadoToolStripMenuItem.Text = "Test Delegado";
             this.testDelegadoToolStripMenuItem.Click += new System.EventHandler(this.testDelegadoToolStripMenuItem_Click);
             // 
             // alumnoToolStripMenuItem
             // 
             this.alumnoToolStripMenuItem.Name = "alumnoToolStripMenuItem";
-            this.alumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alumnoToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.alumnoToolStripMenuItem.Text = "Alumno";
             // 
             // mostrarToolStripMenuItem

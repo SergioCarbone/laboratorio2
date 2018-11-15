@@ -14,7 +14,7 @@ namespace Ejercicio_69_Form
     public partial class FrmTestDelegados : Form
     {
         public event actualizarNombre EventoNombre;
-        frmDatos d;
+
         public FrmTestDelegados()
         {
             InitializeComponent();
@@ -22,13 +22,12 @@ namespace Ejercicio_69_Form
 
         private void FrmTestDelegados_Load(object sender, EventArgs e)
         {
-            d = new frmDatos();
+            
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
-        {            
-            d.ActualizarNombre(txtDelegados.Text);
-            //d.Show();
+        {
+            this.EventoNombre(txtDelegados.Text);
         }
     }
 }
