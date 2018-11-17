@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{80E73187-D576-4349-8F5E-ECE665913BCE}</ProjectGuid>
+    <ProjectGuid>{2721927A-E946-40D8-AB29-7053C0AC7CD5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Entidades</RootNamespace>
@@ -39,17 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Equipo.cs" />
-    <Compile Include="Extencion.cs" />
-    <Compile Include="Grupo.cs" />
-    <Compile Include="GrupoDAO.cs" />
-    <Compile Include="IEntradaSalida.cs" />
+    <Compile Include="Dao.cs" />
+    <Compile Include="IArchivos.cs" />
+    <Compile Include="SerializarXML.cs" />
+    <Compile Include="Votacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Torneo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Excepciones\Excepciones.csproj">
-      <Project>{d50eacb1-dc25-4790-85fa-e4945e0e7b56}</Project>
+      <Project>{9c51aae4-0ddc-4745-8a26-1928862d64c8}</Project>
       <Name>Excepciones</Name>
     </ProjectReference>
   </ItemGroup>

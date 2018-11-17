@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{80E73187-D576-4349-8F5E-ECE665913BCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20180626-SP-Console", "20180626-SP-Console\20180626-SP-Console.csproj", "{3DDDA8F0-8B89-4086-8C09-8FEFACD44565}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carbone.Sergio.2C", "20180626-SP-Console\Carbone.Sergio.2C.csproj", "{3DDDA8F0-8B89-4086-8C09-8FEFACD44565}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excepciones", "Excepciones\Excepciones.csproj", "{D50EACB1-DC25-4790-85FA-E4945E0E7B56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,8 +23,15 @@ Global
 		{3DDDA8F0-8B89-4086-8C09-8FEFACD44565}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DDDA8F0-8B89-4086-8C09-8FEFACD44565}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DDDA8F0-8B89-4086-8C09-8FEFACD44565}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D50EACB1-DC25-4790-85FA-E4945E0E7B56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D50EACB1-DC25-4790-85FA-E4945E0E7B56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D50EACB1-DC25-4790-85FA-E4945E0E7B56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D50EACB1-DC25-4790-85FA-E4945E0E7B56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A53C480-131A-4D2C-9810-F59265AEF77F}
 	EndGlobalSection
 EndGlobal

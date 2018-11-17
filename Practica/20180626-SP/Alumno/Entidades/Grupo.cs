@@ -3,17 +3,55 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Excepciones;
 
 namespace Entidades
 {
     public enum Letras { A, B, C, D, E, F, G, H }
 
-    public class Grupo
+    public class Grupo : IEntradaSalida<Grupo>
     {
         private List<Equipo> equipos;
         private Letras grupo;
         private short maxCantidad;
 
+        public List<Equipo> Equipos
+        {
+            get
+            {
+                return this.equipos;
+            }
+            set
+            {
+                this.equipos = value;
+            }
+        }
+
+        public Letras Grupos
+        {
+            get
+            {
+                return this.grupo;
+            }
+            set
+            {
+                this.grupo = value;
+            }
+        }
+
+        public short MaxCantidad
+        {
+            get
+            {
+                return this.maxCantidad;
+            }
+            set
+            {
+                this.maxCantidad = value;
+            }
+        }
+
+        
         private Grupo()
         {
             this.equipos = new List<Equipo>();
@@ -28,10 +66,15 @@ namespace Entidades
 
         public static Grupo operator +(Grupo g, Equipo e)
         {
-            if (g.equipos.Count < g.maxCantidad)
-                g.equipos.Add(e);
-            
-
+            if (g.Equipos.Count < g.maxCantidad)
+            {
+                g.Equipos.Add(e);
+            }
+            else
+            {
+                string mensaje = string.Format("El Grupo {0} ya cuenta con {1} equipos", g.Grupos, g.maxCantidad);
+                throw new GrupoLlenoException(mensaje);
+            }
             return g;
         }
 
@@ -76,8 +119,7 @@ namespace Entidades
         /// <returns></returns>
         public string MostrarTabla()
         {
-            
-
+            this.equipos.Sort(Ordenar);
             StringBuilder sb = new StringBuilder();
             //sb.AppendLine(string.Format("{0,-20} {1,2} {2,2} {3,2} {4,2}", "Equipo", "Pt", "GH", "GR", "Df"));
             sb.AppendLine("Equipo".FormatoTabla(-20) + " Pt".FormatoTabla(2) + " GH".FormatoTabla(2) + " GR".FormatoTabla(2) + " Df".FormatoTabla(2));
@@ -118,8 +160,23 @@ namespace Entidades
                         this.equipos[i].Puntos += 1;
                         this.equipos[j].Puntos += 1;
                     }
+                    GrupoDAO dao = new GrupoDAO();
+                    dao.Guardar(this.equipos[i], this.equipos[j]);
                 }
             }
+        }
+
+        public Grupo Leer()
+        {
+            GrupoDAO dao = new GrupoDAO();
+            List<Equipo> lista = dao.Leer(this.Grupos);
+            this.Equipos = lista;
+            return this;
+        }
+
+        public Grupo Guardar()
+        {
+            throw new NotImplementedException("El Grupo no podrá ser serializado");
         }
     }
 }

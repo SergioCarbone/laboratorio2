@@ -15,10 +15,15 @@ namespace Entidades
         private short golesHechos;
         private short golesRecibidos;
 
+        public Equipo()
+        {
+
+        }
+
         public Equipo(int id, string nombre)
         {
-            this.id = id;
-            this.nombre = nombre;
+            this.Id = id;
+            this.Nombre = nombre;
         }
 
         public string Nombre
@@ -66,6 +71,18 @@ namespace Entidades
             set
             {
                 this.golesHechos = value;
+            }
+        }
+
+        public int Id
+        {
+            get
+            {
+                return this.id;
+            }
+            set
+            {
+                this.id = value;
             }
         }
     }
