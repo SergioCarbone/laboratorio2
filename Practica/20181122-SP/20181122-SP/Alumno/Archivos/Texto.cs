@@ -22,18 +22,17 @@ namespace Archivos
 
         public void Leer(string archivo, out Queue<Patente> datos)
         {
-            datos = new Queue<Patente>();
-            string info;
-            Patente p;             
-            StreamReader dato = new StreamReader(archivo);
-            do
+            datos = new Queue<Patente>();                       
+            StreamReader file = new StreamReader(archivo);
+            while (!file.EndOfStream)
             {
-                info = dato.ReadLine();
-                p = info.ValidarPatente();
-                datos.Enqueue(p);
-
-            } while (dato != null);
-            dato.Close();
+                try
+                {
+                    datos.Enqueue(file.ReadLine().ValidarPatente());
+                }
+                catch (PatenteInvalidaException e)
+                { }
+            }
         }
     }
 }

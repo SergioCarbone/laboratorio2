@@ -15,7 +15,8 @@ namespace Archivos
         public void Guardar(string archivo, T datos)
         {
             XmlSerializer serializer;
-            XmlTextWriter writer;
+            XmlTextWriter writer;          
+            
 
             writer = new XmlTextWriter(archivo, Encoding.UTF8);
             serializer = new XmlSerializer(typeof(T));

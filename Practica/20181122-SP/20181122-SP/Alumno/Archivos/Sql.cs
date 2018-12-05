@@ -43,20 +43,21 @@ namespace Archivos
         {
             try
             {
-                string query = string.Format("SELECT * FROM '{0}'", tabla);
+                string query = string.Format("SELECT * FROM {0}", tabla);
                 comando = new SqlCommand(query, conexion);
                 conexion.Open();
                 dataReader = comando.ExecuteReader();
-                string codigo;
-                Patente.Tipo tipo;
+                //string codigo;
+                //Patente.Tipo tipo;
                 Patente p;
                 datos = new Queue<Patente>();
 
                 while (dataReader.Read())
                 {
-                    codigo = dataReader["patente"].ToString();                   
-                    tipo = (Patente.Tipo)dataReader["tipo"];
-                    p = new Patente(codigo, tipo);
+                    p = dataReader["patente"].ToString().ValidarPatente();                    
+                    //codigo = dataReader["patente"].ToString();                   
+                    //tipo = (Patente.Tipo)dataReader["tipo"];
+                    //p = new Patente(codigo, tipo);
                     datos.Enqueue(p);
                 }                
             }

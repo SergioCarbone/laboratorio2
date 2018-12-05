@@ -36,7 +36,7 @@ namespace _20181122_SP
         private void ProximaPatente(Patentes.VistaPatente vp)
         {
             hilo = new Thread(new ParameterizedThreadStart(vp.MostrarPatente));
-            hilo.Start();
+            hilo.Start(this.cola.Dequeue());
             listaThread.Add(hilo);
         }
 
@@ -49,14 +49,17 @@ namespace _20181122_SP
         {
             try
             {
-                Xml<Queue<Patente>> xml = new Xml<Queue<Patente>>();
+                List<Patente> lista;
+                Xml<List<Patente>> xml = new Xml<List<Patente>>();
                 string ruta = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/" + "patentes.xml";
-                xml.Leer(ruta, out cola);
+                xml.Leer(ruta, out lista);
+                this.cola = new Queue<Patente>(lista.AsEnumerable().Reverse());
             }
             catch(Exception w)
             {
                 MessageBox.Show(w.Message);
             }
+            IniciarSimulacion();
         }
 
         private void btnTxt_Click(object sender, EventArgs e)
@@ -71,24 +74,31 @@ namespace _20181122_SP
             {
                 MessageBox.Show(w.Message);
             }
+            IniciarSimulacion();
         }
 
         private void btnSql_Click(object sender, EventArgs e)
         {
             Sql sql = new Sql();
             sql.Leer("Patentes", out cola);
-            
+            IniciarSimulacion();            
         }
+
 
         private void FinalizarSimulacion()
         {
             foreach (Thread t in this.listaThread)
             {
-                if(t.IsAlive == true)
+                if (t.IsAlive)
                 {
                     t.Abort();
                 }
             }
+        }
+
+        private void IniciarSimulacion()
+        {
+            FinalizarSimulacion();
             ProximaPatente(vistaPatente1);
             ProximaPatente(vistaPatente2);
         }

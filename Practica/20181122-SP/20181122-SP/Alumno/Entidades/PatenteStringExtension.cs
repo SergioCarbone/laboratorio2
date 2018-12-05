@@ -35,23 +35,29 @@ namespace Entidades
 
         public static Patente ValidarPatente(this string str)
         {
-            Patente p;
+            Patente p = null;
             Regex rgx_v = new Regex(PatenteStringExtension.patente_vieja);
             Regex rgx_n = new Regex(PatenteStringExtension.patente_mercosur);
 
-            if (rgx_v.IsMatch(str))
+            try
             {
-                p = new Patente(str, Patente.Tipo.Vieja);
+                if (rgx_v.IsMatch(str))
+                {
+                    p = new Patente(str, Patente.Tipo.Vieja);
+                }
+                else if (rgx_n.IsMatch(str))
+                {
+                    p = new Patente(str, Patente.Tipo.Mercosur);
+                }
+                else
+                {                    
+                    throw null;
+                }
             }
-            else if (rgx_n.IsMatch(str))
-            {
-                p = new Patente(str, Patente.Tipo.Mercosur);
-            }
-            else
+            catch(Exception e)
             {
                 string s = string.Format("{0} no cumple el formato.", str);
-                throw new PatenteInvalidaException(s);
-                throw null;
+                throw new PatenteInvalidaException(s,e);
             }
             return p;
         }

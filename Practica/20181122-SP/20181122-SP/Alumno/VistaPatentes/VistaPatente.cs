@@ -38,7 +38,8 @@ namespace Patentes
                     // Llamar al hilo principal
                     // ALUMNO
                     MostrarPatente m = new MostrarPatente(MostrarPatente);
-                    this.Invoke(m);
+                    //lblPatenteNro.Invoke(new MostrarPatente(this.MostrarPatente), patente);
+                    this.Invoke(m, patente);
                     Thread.Sleep(r.Next(2000, 5000));
 
                     // Agregar evento de que finalizó la exposición de la patente
